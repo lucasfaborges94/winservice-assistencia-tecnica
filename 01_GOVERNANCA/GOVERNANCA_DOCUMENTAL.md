@@ -1,6 +1,6 @@
 # Governança Documental da Winservice
 
-<badge>REVISÃO PENDENTE</badge>
+**STATUS: REVISÃO PENDENTE — MINUTA NÃO APROVADA**
 
 > **Status:** Minuta para revisão  
 > **Versão:** 0.1  
