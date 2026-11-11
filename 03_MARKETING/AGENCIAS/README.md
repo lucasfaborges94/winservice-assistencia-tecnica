@@ -12,16 +12,17 @@ Estrutura recomendada:
 AGENCIAS/
 ├── README.md
 ├── DIGITAL_L_A_C/
-│   └── RELACIONAMENTO_DIGITAL_L_A_C.md
+│   ├── RELACIONAMENTO_DIGITAL_L_A_C.md
+│   └── ACOMPANHAMENTO_REUNIAO_INICIAL.md
 └── NOME_DA_PROXIMA_AGENCIA/
     └── RELACIONAMENTO_NOME_DA_AGENCIA.md
 ```
 
 ## Agências registradas
 
-| Agência | Contato principal informado | Registro |
+| Agência | Contato principal informado | Documentação |
 |---|---|---|
-| Digital L A C | Leonardo | [Acompanhamento do relacionamento](DIGITAL_L_A_C/RELACIONAMENTO_DIGITAL_L_A_C.md) |
+| Digital L A C | Leonardo | [Histórico do relacionamento](DIGITAL_L_A_C/RELACIONAMENTO_DIGITAL_L_A_C.md) · [Acompanhamento da reunião inicial](DIGITAL_L_A_C/ACOMPANHAMENTO_REUNIAO_INICIAL.md) |
 
 ## Critérios para comparação futura
 
