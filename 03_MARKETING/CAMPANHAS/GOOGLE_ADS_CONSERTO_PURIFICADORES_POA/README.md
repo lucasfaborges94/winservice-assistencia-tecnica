@@ -16,7 +16,7 @@ Teste de Pesquisa com R$ 50/dia, direcionado a pessoas que procuram assistência
 
 ## Estado atual — 14/11/2026
 
-Página publicada e verificada na Hostinger em 14/11/2026, com imagem e botões para o WhatsApp (51) 98145-9630. Atualizada com a identidade WS, família de ícones SVG, layout móvel e seletor compacto Sistema / Claro / Escuro. O modo Sistema é o padrão. O kit visual está publicado em https://winservicers.com/identidade/. A conta Google Ads 738-373-8641 tem um rascunho de Pesquisa em configuração. O assistente exige concluir o faturamento e exibe aviso de autorização temporária de R$ 50. O formulário ficou sem envio e não exibiu opção de criação já pausada. Nenhuma campanha foi ativada por este trabalho.
+Página publicada e verificada na Hostinger em 14/11/2026, com imagem e botões para o WhatsApp (51) 98145-9630. Atualizada com a identidade WS, família de ícones SVG, enquadramento móvel que mantém o purificador visível e tema automático conforme a preferência do sistema operacional. O kit visual está publicado em https://winservicers.com/identidade/. A conta Google Ads 738-373-8641 tem um rascunho de Pesquisa em configuração. O assistente exige concluir o faturamento e exibe aviso de autorização temporária de R$ 50. O formulário ficou sem envio e não exibiu opção de criação já pausada. Nenhuma campanha foi ativada por este trabalho.
 
 ## Verificações e pendências
 
