@@ -1,7 +1,7 @@
 # Log de trabalho de IA — Campanha de purificadores
 
 **Data:** 14/11/2026 (America/Sao_Paulo)  
-**Estado do trabalho:** Em andamento  
+**Estado do trabalho:** Página publicada; rascunho de Ads aguardando faturamento e medição  
 **Escopo:** Landing page, campanha de Pesquisa, medição e registro de implantação.
 
 ## Entregas registradas
@@ -20,3 +20,11 @@ Publicar o HTML e a imagem no destino indicado, conferir a página pública e o 
 ## Verificação
 
 A presença da pasta de hospedagem e a etapa da conta Ads foram observadas em tela. Este registro documenta o andamento em 14/11/2026. O registro de Marketing concentra o estado da implantação e os parâmetros da campanha.
+
+## Atualização após a publicação
+
+Página publicada e verificada na Hostinger em 14/11/2026, com imagem e botões para o WhatsApp (51) 98145-9630. A conta Google Ads 738-373-8641 tem um rascunho de Pesquisa em configuração. O assistente exige concluir o faturamento e exibe aviso de autorização temporária de R$ 50. O formulário ficou sem envio e não exibiu opção de criação já pausada. Nenhuma campanha foi ativada por este trabalho.
+
+O navegador integrado confirmou a imagem e os links de WhatsApp. No rascunho foram definidos Pesquisa Google, presença em Porto Alegre, Display e parceiros de pesquisa desativados, nove palavras-chave, sete títulos, duas descrições, cliques com teto de CPC de R$ 5 e orçamento médio de R$ 50/dia. A meta Contatos está em configuração manual. As negativas continuam documentadas para inclusão no painel. A propriedade GA4 Win Service 421013517 tem fluxo de outro domínio. As tags de Ads e GA4 continuam pendentes.
+
+Foi criado um painel HTML na Área de Trabalho com o progresso e uma leitura dos tokens acumulados da conversa.
