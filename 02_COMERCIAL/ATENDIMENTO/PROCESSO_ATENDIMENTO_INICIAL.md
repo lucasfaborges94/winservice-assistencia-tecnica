@@ -37,3 +37,11 @@ Este registro **não autoriza** a IA a inventar preços, prometer gratuidade, co
 - **Valor da cobrança não informado**; não presumir valores ou condições adicionais.
 - **Pendente de confirmação:** se a afirmação sobre cobrança para “o restante” também abrange outras categorias de equipamentos, ou apenas lava e seca de outras marcas.
 - A regra de cobrança também havia sido descrita como dependente da região; faltam detalhamento de exceções e conciliação dessa variável com as regras acima.
+
+## Esclarecimento da direção — classificação de marcas por equipamento (14/11/2026)
+- A política de cobrança de orçamento **não se limita a lava e seca**: aplica-se à análise de qualquer categoria de equipamento atendida.
+- Há marcas em que a Winservice é especializada e **não cobra orçamento**, marcas neutras e marcas consideradas mais problemáticas, para as quais pode haver cobrança de orçamento **mais elevada**.
+- A classificação precisa ser definida por **combinação de tipo de equipamento e marca**, com eventuais condicionantes de região e solicitação; não presumir que a classificação de uma marca em lava e seca se aplique a todas as categorias.
+- Regra específica já informada: para **lava e seca LG e Samsung**, não cobrar orçamento; para outras marcas de lava e seca, há cobrança, sujeita à futura matriz de valores e exceções.
+- **Pendências:** relação de categorias de equipamentos; marcas especializadas, neutras e problemáticas em cada categoria; valores e exceções regionais; tratamento comercial de cada classe.
+- Até a matriz estar definida, o agente deve consultar uma regra aprovada ou encaminhar para confirmação humana, sem inventar preços ou isenções.
