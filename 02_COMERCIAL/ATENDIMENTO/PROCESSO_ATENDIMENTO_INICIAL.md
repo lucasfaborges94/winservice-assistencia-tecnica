@@ -80,3 +80,11 @@ Este registro **não autoriza** a IA a inventar preços, prometer gratuidade, co
 - A situação de interação deve ser modelada separadamente da etapa da máquina de estados, evitando perda do progresso da qualificação ou de outra etapa.
 - O motor de follow-up poderá agir conforme a etapa, interrompendo tentativas quando houver resposta ou recusa. **Até duas tentativas** foram sugeridas pelo assistente, mas ainda não confirmadas pela direção; intervalos e regras de envio seguem pendentes.
 - Proposta técnica ainda não implantada: armazenar etapa principal, situação de interação, instante da última resposta do cliente e prazo de inatividade; ao atingir 15 dias sem resposta, arquivar operacionalmente sem apagar o histórico; em retorno espontâneo, recuperar contexto e revalidar dados dinâmicos.
+
+## Situações da conversa — conjunto mínimo aceito (14/11/2026)
+A direção aceitou começar com quatro situações de conversa, ampliáveis conforme surgirem novos cenários: **ativa**, **aguardando cliente**, **aguardando equipe** e **encerrada**. Essas situações são distintas da **etapa principal** do atendimento (qualificação, condições comerciais, agendamento etc.).
+- **Ativa:** conversa em andamento.
+- **Aguardando cliente:** próxima ação depende da resposta do cliente; pode receber acompanhamento conforme regras do motor de follow-up e arquivamento por inatividade após 15 dias.
+- **Aguardando equipe:** próxima ação depende de humano da Winservice, como validar exceção comercial ou confirmar disponibilidade; deve gerar tarefa/notificação interna pertinente.
+- **Encerrada:** situação de conversa sem ação imediata; o motivo e o estado comercial devem ser mantidos separadamente, para não confundir recusa com arquivamento por inatividade.
+Este conjunto é **inicial, não exaustivo**; detalhes das transições e condições ainda serão refinados. A direção concordou em manter 'aguardando equipe' desde já.
