@@ -28,3 +28,13 @@ Página publicada e verificada na Hostinger em 14/11/2026, com imagem e botões 
 O navegador integrado confirmou a imagem e os links de WhatsApp. No rascunho foram definidos Pesquisa Google, presença em Porto Alegre, Display e parceiros de pesquisa desativados, nove palavras-chave, sete títulos, duas descrições, cliques com teto de CPC de R$ 5 e orçamento médio de R$ 50/dia. A meta Contatos está em configuração manual. As negativas continuam documentadas para inclusão no painel. A propriedade GA4 Win Service 421013517 tem fluxo de outro domínio. As tags de Ads e GA4 continuam pendentes.
 
 Foi criado um painel HTML na Área de Trabalho com o progresso e uma leitura dos tokens acumulados da conversa.
+
+## Conclusão da etapa de faturamento e publicação da tag
+
+- O titular informou que fez o Pix. O painel passou a exibir a campanha de Pesquisa criada, com orçamento de R$ 50,00/dia.
+- A campanha 24472460767 foi renomeada para Pesquisa | Conserto de Purificadores | Porto Alegre e ficou com status Pausada.
+- Foi pausado o recurso de chamada da conta que mostrava um número divergente. A página permanece com o WhatsApp (51) 98145-9630.
+- A tag da ação de site Contato foi publicada na Hostinger. Após limpar o cache, a URL pública sem parâmetros exibiu a tag, o rótulo da conversão e cinco links para o WhatsApp informado.
+- A validação do recebimento da conversão pelo Google Ads, a lista de negativas e a implantação do GA4 no domínio ainda estão pendentes.
+
+[Registro atualizado de Marketing](../../../03_MARKETING/CAMPANHAS/GOOGLE_ADS_CONSERTO_PURIFICADORES_POA/README.md)
