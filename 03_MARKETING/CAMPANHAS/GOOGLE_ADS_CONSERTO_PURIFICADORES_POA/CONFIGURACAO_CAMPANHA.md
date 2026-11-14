@@ -1,15 +1,15 @@
 # Configuração da campanha — Conserto de purificadores
 
-**Status do registro:** Preparação concluída; configuração na conta pendente  
+**Status do registro:** Rascunho preenchido no assistente; faturamento pendente  
 **Revisão:** 14/11/2026  
 **Responsável:** Marketing — Winservice  
 **Conta Google Ads indicada:** 738-373-8641  
 **Status desejado na conta:** Pausada até revisão e autorização de ativação  
-**Página final planejada:** https://winservicers.com/conserto-purificadores
+**Página publicada:** https://winservicers.com/conserto-purificadores
 
-> Este documento registra a configuração proposta. A campanha ainda não foi criada na conta e não está anunciando. O acesso visual à conta falhou durante a inspeção, por isso não foi possível gravar ou confirmar mudanças no Google Ads, Hostinger ou Google Analytics.
+> Página publicada e verificada na Hostinger em 14/11/2026, com imagem e botões para o WhatsApp (51) 98145-9630. A conta Google Ads 738-373-8641 tem um rascunho de Pesquisa em configuração. O assistente exige concluir o faturamento e exibe aviso de autorização temporária de R$ 50. O formulário ficou sem envio e não exibiu opção de criação já pausada. Nenhuma campanha foi ativada por este trabalho.
 
-## Configuração proposta
+## Configuração e estado observado
 
 | Item | Valor |
 |---|---|
@@ -57,8 +57,8 @@ Revisar semanalmente o relatório de termos de pesquisa. Não bloquear automatic
 
 ## Lance e estrutura
 
-- Começar com uma única campanha de Pesquisa e poucos grupos temáticos para concentrar o orçamento.
-- Com dados iniciais insuficientes, avaliar Maximizar cliques com limite de CPC definido após consulta ao Planejador de palavras-chave.
+- O rascunho contém uma campanha de Pesquisa com o conjunto inicial de palavras-chave abaixo.
+- No rascunho foi selecionada a estratégia por cliques com teto de CPC de R$ 5. Esse valor é hipótese de partida e não foi validado no Planejador.
 - Após mensuração confiável de contatos qualificados e serviços concluídos, avaliar Maximizar conversões.
 - Não usar cliques no WhatsApp como sinônimo de lead qualificado ou venda. Registrar os resultados no atendimento.
 
@@ -66,17 +66,18 @@ Revisar semanalmente o relatório de termos de pesquisa. Não bloquear automatic
 
 **Títulos**
 
-- Conserto de Purificador em Porto Alegre
-- Assistência para Purificador de Água
-- Seu Purificador Está Vazando?
-- Purificador Não Está Gelando?
-- Consulte Atendimento pelo WhatsApp
-- Informe Marca, Modelo e Bairro
+- Conserto de Purificador
+- Purificador Não Gela?
+- Purificador Vazando?
+- Assistência em Porto Alegre
+- Fale Pelo WhatsApp
+- Winservice Assistência
+- Consulte Seu Modelo
 
 **Descrições**
 
-- Conte o que aconteceu com seu purificador. A Winservice confirma atendimento para o modelo e o endereço.
-- Envie marca, modelo, bairro e uma foto pelo WhatsApp. Consulte disponibilidade e condições de avaliação.
+- Purificador vazando ou sem gelar? Envie marca, modelo e bairro pelo WhatsApp.
+- Consulte a disponibilidade de assistência em Porto Alegre e as condições de avaliação.
 
 Não publicar promessas de atendimento no mesmo dia, peças originais, autorização de fabricante, orçamento gratuito ou garantia até aprovação operacional.
 
@@ -85,7 +86,7 @@ Não publicar promessas de atendimento no mesmo dia, peças originais, autoriza�
 - Conversão inicial de interface: clique no botão/link para abrir o WhatsApp. É um sinal de intenção, não comprova que a mensagem foi enviada.
 - Conversão de negócio prioritária: contato qualificado, agendamento concluído e serviço realizado, registrados pela Winservice. Se houver integração adequada, importar conversões offline para o Google Ads.
 - A tag de conversão do Google Ads não está instalada. Falta criar a ação de conversão na conta e inserir o ID e o rótulo gerados pelo Google.
-- A tag do Google Analytics também não está instalada nem confirmada; falta identificar o ID da propriedade/fluxo GA4.
+- A tag do Google Analytics também não está instalada nem confirmada; o fluxo existente na propriedade Win Service 421013517 aponta para consertolavaesecapoa.com.br. Falta definir o fluxo de winservicers.com.
 - No arquivo da landing page, o disparo do evento está condicionado a `WINSERVICE_ADS_CONVERSION_LABEL`; sem a tag e o rótulo, nenhum evento de conversão do Google Ads é enviado.
 
 ## Indicadores de acompanhamento
@@ -95,8 +96,8 @@ Investimento, impressões, CTR, CPC médio, cliques, contatos recebidos, contato
 ## Pendências antes da ativação
 
 1. Confirmar bairros atendidos, marcas/modelos, defeitos cobertos, modalidade do atendimento, horário, política de avaliação, preço e garantia.
-2. Criar campanha na conta indicada e verificar as configurações propostas.
+2. O titular deve concluir o faturamento. Verificar uma opção para criar a campanha pausada, confirmar idioma e aplicar as negativas no painel da conta.
 3. Criar a ação de conversão do WhatsApp e instalar tag + rótulo reais.
 4. Confirmar o ID do Google Analytics e instalar a tag GA4 se aplicável.
-5. Publicar a landing page e validar URL, WhatsApp e medições.
+5. A página está publicada e o destino WhatsApp foi conferido no navegador. Validar as medições após instalar as tags.
 6. Deixar a campanha pausada até autorização de ativação.
