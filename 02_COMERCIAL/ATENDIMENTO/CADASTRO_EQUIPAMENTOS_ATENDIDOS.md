@@ -25,6 +25,14 @@ O agente consulta esse cadastro por tool a cada nova qualificação, antes de pr
 
 As regras de cobrança/isenção permanecem em matriz separada por categoria, marca e região. O status da categoria, sozinho, não determina preço nem cobertura.
 
+## Regra adicional confirmada pela direção — indisponibilidade temporária
+- O cadastro deve permitir marcar uma categoria como **temporariamente indisponível**, informando a **previsão de retorno**.
+- Exemplo: ausência de técnico por férias ou doença. A IA deve informar ao cliente a indisponibilidade atual e a previsão registrada.
+- O atendimento poderá ser oferecido para uma data futura, mas **somente se houver horário efetivamente disponível e confirmado**; a previsão de retorno não equivale a uma reserva.
+- A previsão poderá mudar; quando não houver data confiável, a IA não deve inventar uma.
+- A categoria permanece cadastrada, com histórico preservado, e pode voltar ao status ativo.
+- Proposta técnica: guardar status, previsão de retorno, motivo interno, data de revisão e última atualização; verificar a agenda antes de confirmar qualquer visita. Não divulgar detalhes pessoais do afastamento do técnico ao cliente.
+
 ## Pendências
 - Confirmar quando a operação de purificadores estará efetivamente disponível para agendamento.
 - Definir demais categorias e sua disponibilidade.
