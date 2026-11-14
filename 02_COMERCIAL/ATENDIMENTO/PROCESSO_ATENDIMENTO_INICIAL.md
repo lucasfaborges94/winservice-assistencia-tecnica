@@ -53,3 +53,10 @@ Este registro **não autoriza** a IA a inventar preços, prometer gratuidade, co
 - Proposta técnica: persistir clientes/contatos, atendimentos e mensagens em entidades separadas, com identificador único por atendimento; validar a escolha do atendimento e evitar duplicações antes de qualquer transição de estado.
 - Não expor dados sensíveis de atendimentos anteriores apenas por correspondência de número; exigir confirmação adicional quando necessário.
 - Esta regra está documentada, mas a automação ainda não foi implementada.
+
+## Decisão da direção — retomada após interrupção (14/11/2026)
+- Se o cliente interromper a conversa durante a qualificação e voltar posteriormente, a IA deve **retomar do ponto em que parou**, aproveitando as informações já coletadas no atendimento correspondente.
+- Não repetir perguntas respondidas, salvo quando houver necessidade de confirmar dados desatualizados, contraditórios ou alterados pelo cliente.
+- A retomada deve respeitar a regra de identificar o atendimento correto pelo contexto, perguntando apenas em caso de ambiguidade.
+- Proposta técnica não implantada: persistir o estado da qualificação e campos coletados por atendimento; consultar dados atualizados de disponibilidade, condições comerciais e agenda antes de prometer ou confirmar qualquer serviço.
+- Pendente definir política de acompanhamento de clientes sem resposta, prazos e encerramento de solicitações abandonadas.
