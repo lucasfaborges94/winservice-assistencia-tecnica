@@ -1,23 +1,26 @@
-# CONTEXTO — Visão geral da Winservice
+# CONTEXTO — Visão institucional da Winservice
 
-**Status:** Em elaboração  
-**Versão:** 0.1  
-**Escopo:** Raiz do repositório
+**Status:** Vigente como registro de contexto, sujeito a atualização factual  
+**Versão:** 1.0  
+**Validação da estrutura:** Direção, 14/11/2026
 
-## Identidade
-Winservice — Assistência Técnica. Negócio de assistência técnica em eletrodomésticos, com atuação mencionada em lavadoras, lava e seca e refrigeradores. A cobertura de Porto Alegre e Canoas consta de registros de marketing e deve ser validada para decisões operacionais.
+## Identidade e objetivo
+Winservice — Assistência Técnica, empresa de serviços em eletrodomésticos. O objetivo de longo prazo é desenvolver uma operação rentável, profissional, escalável e menos dependente do fundador, com ambição de ultrapassar 100 colaboradores.
 
-## Objetivo estratégico
-Construir uma operação rentável, profissional, escalável e progressivamente independente do fundador, com ambição de alcançar mais de 100 colaboradores ao longo do desenvolvimento da empresa.
+## Informações a confirmar
+Registros anteriores mencionam lavadoras, lava e seca e refrigeradores, bem como Porto Alegre e Canoas. Essas referências são contexto histórico e devem ser confirmadas antes de decisões comerciais ou operacionais. Equipe, capacidade, faturamento, margens, ferramentas e metas quantitativas ainda exigem diagnóstico.
 
-## Estado do conhecimento
-O repositório está em fase inicial de organização. A governança documental existente é uma minuta com revisão pendente, não uma política aprovada. Há registros de relacionamento e planejamento de reunião com agência de marketing, que não equivalem a contratação aprovada.
+## Governança do conhecimento
+Documentos centrais aprovados: `AGENTES.md`, `CONTEXTO.md`, `00_INSTITUCIONAL/REGRAS_DA_EMPRESA.md` e `01_GOVERNANCA/GUIA_USO_REPOSITORIO.md`. A norma `01_GOVERNANCA/GOVERNANCA_DOCUMENTAL.md` continua como minuta em revisão pendente e não foi aprovada por inferência.
 
-## Estrutura
-A organização temática proposta inclui institucional, governança, comercial, marketing, operacional, financeiro, jurídico, recursos humanos, tecnologia e arquivo. A existência física de cada pasta deve ser verificada.
+## Organização
+O repositório adota áreas temáticas: institucional, governança, comercial, marketing, operacional, financeiro, jurídico, recursos humanos, tecnologia e arquivo. Pastas e arquivos locais serão criados conforme a necessidade, sem presumir que toda a árvore proposta já existe.
 
-## Lacunas prioritárias
-Validar situação atual de equipe, serviços, área atendida, capacidade, faturamento, margens, metas, processos, ferramentas e prioridades. Não preencher lacunas por inferência.
+## Registros relacionados
+Existem documentos de planejamento e relacionamento com agência de marketing. Eles não devem ser interpretados como contratação concluída sem comprovação.
 
-## Regra de atualização
-Este documento contém apenas síntese institucional e mudanças transversais relevantes. Detalhes e registros oficiais permanecem nos documentos especializados.
+## Manutenção
+Este arquivo é um resumo transversal. Alterações locais só devem chegar aqui quando relevantes para a visão geral; fatos detalhados permanecem nas fontes especializadas.
+
+## Histórico
+- 1.0 — 14/11/2026: estrutura de contexto aprovada, com lacunas factuais explicitadas.
