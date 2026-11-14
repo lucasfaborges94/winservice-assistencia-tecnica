@@ -30,10 +30,13 @@
     .label { margin-bottom:7px; font-size:14px; font-weight:700; color:var(--ws-text-muted); }
     .swatch-grid { display:grid; grid-template-columns:repeat(4,minmax(0,1fr)); gap:10px; }
     .swatch { min-width:0; background:var(--ws-surface); border:1px solid var(--ws-border); border-radius:12px; overflow:hidden; }
-    .swatch span { display:block; height:52px; background:var(--sample); border-bottom:1px solid var(--ws-border); }
+    .swatch-sample { display:block; height:52px; background:var(--sample); border-bottom:1px solid var(--ws-border); }
     .swatch strong,.swatch code { display:block; margin-inline:10px; }
     .swatch strong { margin-top:8px; font-size:13px; }
     .swatch code { margin-bottom:8px; color:var(--ws-text-muted); font-size:12px; }
+    .swatch-actions { display:flex; flex-wrap:wrap; gap:6px; margin:8px 8px 10px; }
+    .swatch-actions .ws-button { flex:1 0 auto; padding:6px 8px; font-size:12px; }
+    .copy-status { min-height:1.55em; margin:-8px 0 12px; font-size:14px; }
     .actions { display:flex; gap:8px; flex-wrap:wrap; margin-block:14px; }
     .field { display:grid; gap:5px; max-width:360px; font-size:14px; font-weight:700; }
     .field input { min-height:44px; padding:8px 12px; border:1px solid var(--ws-control-border); border-radius:8px; color:var(--ws-text); background:var(--ws-canvas); font:inherit; }
@@ -79,6 +82,7 @@
     </section>
     <section aria-labelledby="palette-title">
       <h2 id="palette-title">Paleta do tema</h2>
+      <p id="copy-status" class="copy-status" role="status"></p>
       <div id="swatches" class="swatch-grid"></div>
     </section>
     <section aria-labelledby="ui-title">
@@ -112,6 +116,7 @@
     const scheme = matchMedia('(prefers-color-scheme: dark)');
     const choices = document.querySelectorAll('[data-choice]');
     const palette = document.querySelector('#swatches');
+    const copyStatus = document.querySelector('#copy-status');
     const colors = [
       ['Azul marinho', 'navy'], ['Âmbar', 'amber'], ['Branco frio', 'paper'],
       ['Fundo', 'canvas'], ['Superfície', 'surface'], ['Fundo alternado', 'surface-alt'],
@@ -122,6 +127,53 @@
     try { choice = localStorage.getItem('winservice-theme') || choice; } catch {}
     if (!['system', 'light', 'dark'].includes(choice)) choice = 'system';
 
+    async function copyText(text) {
+      try {
+        await navigator.clipboard.writeText(text);
+        return true;
+      } catch {
+        // A cópia em arquivos HTML abertos localmente pode depender do navegador.
+      }
+
+      const active = document.activeElement;
+      const field = document.createElement('textarea');
+      field.value = text;
+      field.readOnly = true;
+      field.tabIndex = -1;
+      field.style.cssText = 'position:fixed;inset:0 auto auto 0;opacity:0;pointer-events:none';
+      document.body.append(field);
+      try {
+        field.focus({ preventScroll: true });
+        field.select();
+        return document.execCommand('copy');
+      } catch {
+        return false;
+      } finally {
+        field.remove();
+        active?.focus({ preventScroll: true });
+      }
+    }
+
+    function copyButton(caption, label, value, message) {
+      const button = document.createElement('button');
+      button.type = 'button';
+      button.className = 'ws-button ws-button--secondary ws-focus';
+      button.textContent = caption;
+      button.setAttribute('aria-label', caption + ' de ' + label);
+      let resetLabel;
+      button.addEventListener('click', async () => {
+        const copied = await copyText(value);
+        if (!button.isConnected) return;
+        clearTimeout(resetLabel);
+        button.textContent = copied ? 'Copiado!' : caption;
+        copyStatus.textContent = copied ? message : 'A cópia automática falhou. Selecione o texto e copie manualmente.';
+        if (copied) {
+          resetLabel = setTimeout(() => { button.textContent = caption; }, 1800);
+        }
+      });
+      return button;
+    }
+
     function renderTheme() {
       if (choice === 'system') delete root.dataset.theme;
       else root.dataset.theme = choice;
@@ -129,6 +181,7 @@
       const logo = document.querySelector('#header-logo');
       logo.src = 'logos/logo-horizontal-' + (isDark ? 'escuro' : 'claro') + '.svg';
       choices.forEach(button => button.setAttribute('aria-pressed', button.dataset.choice === choice));
+      copyStatus.textContent = '';
       const styles = getComputedStyle(root);
       palette.replaceChildren(...colors.map(([label, name]) => {
         const value = styles.getPropertyValue('--ws-' + name).trim();
@@ -136,12 +189,19 @@
         const sample = document.createElement('span');
         const title = document.createElement('strong');
         const code = document.createElement('code');
+        const actions = document.createElement('div');
         card.className = 'swatch';
+        sample.className = 'swatch-sample';
         sample.style.setProperty('--sample', value);
         sample.setAttribute('aria-hidden', 'true');
         title.textContent = label;
         code.textContent = value;
-        card.append(sample, title, code);
+        actions.className = 'swatch-actions';
+        actions.append(
+          copyButton('Copiar HEX', label, value, 'Código ' + value + ' copiado.'),
+          copyButton('Copiar nome', label, label, 'Nome “' + label + '” copiado.')
+        );
+        card.append(sample, title, code, actions);
         return card;
       }));
     }
