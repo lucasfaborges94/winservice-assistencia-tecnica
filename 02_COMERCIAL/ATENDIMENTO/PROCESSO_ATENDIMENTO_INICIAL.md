@@ -63,8 +63,13 @@ Este registro **não autoriza** a IA a inventar preços, prometer gratuidade, co
 
 ## Decisão da direção — recusa com período de retenção (14/11/2026)
 - Quando o cliente recusar expressamente o serviço, registrar o atendimento como **recusado**, preservando o histórico e permitindo retomada caso ele procure novamente.
-- A direção deseja manter o atendimento nessa condição por um período de referência de **15 a 30 dias**; o prazo exato ainda precisa ser escolhido.
+- **Prazo confirmado pela direção: 30 dias** no estado recusado, contados a partir da recusa.
 - A recusa deve **interromper imediatamente os follow-ups comerciais** dessa solicitação; manter registro não autoriza novas mensagens de insistência.
 - Se o cliente voltar espontaneamente durante o período, a IA deve identificar o atendimento anterior e retomar o contexto, verificando novamente condições e disponibilidade atualizadas.
-- Proposta técnica: distinguir status comercial recusado, prazo de retenção operacional e política de arquivamento. Após o prazo, arquivar/encerrar operacionalmente sem apagar o histórico; uma nova manifestação do cliente pode reabrir ou criar novo atendimento conforme regra futura.
+- Proposta técnica: distinguir status comercial recusado, prazo de retenção operacional e política de arquivamento. Após **30 dias**, passar automaticamente para **arquivado**, sem apagar o histórico; uma nova manifestação do cliente pode iniciar novo atendimento com referência ao histórico, conforme identificação contextual.
 - O motor de follow-up será separado da máquina de estados, com políticas por etapa; intervalos e quantidade de tentativas ainda não definidos.
+
+## Confirmação final do prazo de recusa (14/11/2026)
+- A direção confirmou expressamente a proposta de **30 dias como recusado**, seguidos de arquivamento operacional automático com preservação do histórico.
+- Nenhum follow-up comercial deve ser enviado após recusa expressa. Retomada durante os 30 dias ocorre somente por iniciativa do cliente.
+- Implementação e rotina de arquivamento ainda pendentes.
