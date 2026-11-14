@@ -41,8 +41,14 @@ As regras de cobrança/isenção permanecem em matriz separada por categoria, ma
 - Proposta técnica: workflow agendado no n8n para detectar vencimento da previsão; evento de demanda do cliente para reforçar notificação; tarefa de confirmação persistida com deduplicação, responsável, histórico e lembretes; ação humana autenticada para confirmar.
 - A notificação é automática; **a ativação é manual**. A regra está documentada, mas nenhum workflow, alerta ou integração foi implementado.
 
+## Canal de confirmação definido pela direção — notificações internas
+- As solicitações automáticas de confirmação de reativação serão exibidas **dentro do sistema integrado à IA**, em uma **área de notificações por usuário**.
+- A notificação deve ser direcionada ao usuário responsável e permitir que ele acesse a solicitação pendente para decidir manualmente pela reativação ou pela prorrogação da indisponibilidade.
+- A decisão e seu autor devem ficar registrados; a IA não pode confirmar por conta própria.
+- Proposta técnica ainda não implantada: notificação persistente vinculada a usuário, categoria e tarefa de reativação; estados de leitura e resolução, com prevenção de duplicatas. A interface e as permissões específicas serão definidas na implementação.
+
 ## Pendências
 - Confirmar quando a operação de purificadores estará efetivamente disponível para agendamento.
 - Definir demais categorias e sua disponibilidade.
 - Aprovar estados e regras de ativação/desativação e o responsável pela manutenção do cadastro.
-- Definir integração com o banco, ferramentas e workflow do n8n.
+- Definir integração com o banco, ferramentas e workflow do n8n, além de permissões e interface da central de notificações.
