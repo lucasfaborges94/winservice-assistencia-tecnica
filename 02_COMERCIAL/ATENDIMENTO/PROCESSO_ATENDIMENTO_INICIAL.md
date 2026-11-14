@@ -73,3 +73,10 @@ Este registro **não autoriza** a IA a inventar preços, prometer gratuidade, co
 - A direção confirmou expressamente a proposta de **30 dias como recusado**, seguidos de arquivamento operacional automático com preservação do histórico.
 - Nenhum follow-up comercial deve ser enviado após recusa expressa. Retomada durante os 30 dias ocorre somente por iniciativa do cliente.
 - Implementação e rotina de arquivamento ainda pendentes.
+
+## Decisão da direção — inatividade sem resposta (14/11/2026)
+- Se o cliente interromper a conversa sem recusar o serviço, o atendimento **permanece na etapa principal atual** (por exemplo, qualificação), mas sua **situação de interação** passa a **sem resposta / aguardando cliente**.
+- A direção confirmou **15 dias sem resposta** como prazo para arquivamento operacional por inatividade, preservando histórico e informações coletadas para eventual retomada.
+- A situação de interação deve ser modelada separadamente da etapa da máquina de estados, evitando perda do progresso da qualificação ou de outra etapa.
+- O motor de follow-up poderá agir conforme a etapa, interrompendo tentativas quando houver resposta ou recusa. **Até duas tentativas** foram sugeridas pelo assistente, mas ainda não confirmadas pela direção; intervalos e regras de envio seguem pendentes.
+- Proposta técnica ainda não implantada: armazenar etapa principal, situação de interação, instante da última resposta do cliente e prazo de inatividade; ao atingir 15 dias sem resposta, arquivar operacionalmente sem apagar o histórico; em retorno espontâneo, recuperar contexto e revalidar dados dinâmicos.
