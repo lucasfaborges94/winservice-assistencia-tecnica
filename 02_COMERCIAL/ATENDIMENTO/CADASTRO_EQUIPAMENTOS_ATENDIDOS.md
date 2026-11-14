@@ -33,6 +33,14 @@ As regras de cobrança/isenção permanecem em matriz separada por categoria, ma
 - A categoria permanece cadastrada, com histórico preservado, e pode voltar ao status ativo.
 - Proposta técnica: guardar status, previsão de retorno, motivo interno, data de revisão e última atualização; verificar a agenda antes de confirmar qualquer visita. Não divulgar detalhes pessoais do afastamento do técnico ao cliente.
 
+## Regra confirmada — reativação manual com solicitação automática (14/11/2026)
+- **Somente uma pessoa autorizada pode reativar** o atendimento de uma categoria. A IA e a automação não podem mudar o status para ativo por conta própria.
+- Ao atingir ou ultrapassar a previsão de retorno, a automação altera o status de temporariamente indisponível para **reativação pendente** e gera automaticamente uma solicitação/notificação de confirmação à equipe responsável.
+- Se um cliente solicitar atendimento enquanto a categoria estiver em reativação pendente, a IA deve gerar ou reforçar a solicitação de confirmação, sem duplicar notificações em excesso, e informar que a disponibilidade está sendo verificada. Não prometer agendamento antes da confirmação e da consulta à agenda.
+- Após confirmação humana, o sistema pode registrar o status **ativo**, o responsável e a data/hora da decisão. Se a indisponibilidade continuar, a equipe deve atualizar a previsão e manter/suspender o atendimento.
+- Proposta técnica: workflow agendado no n8n para detectar vencimento da previsão; evento de demanda do cliente para reforçar notificação; tarefa de confirmação persistida com deduplicação, responsável, histórico e lembretes; ação humana autenticada para confirmar.
+- A notificação é automática; **a ativação é manual**. A regra está documentada, mas nenhum workflow, alerta ou integração foi implementado.
+
 ## Pendências
 - Confirmar quando a operação de purificadores estará efetivamente disponível para agendamento.
 - Definir demais categorias e sua disponibilidade.
