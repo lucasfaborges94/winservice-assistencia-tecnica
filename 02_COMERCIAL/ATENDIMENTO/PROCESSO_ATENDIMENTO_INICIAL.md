@@ -29,3 +29,11 @@ Possíveis saídas a modelar: solicitação não atendida, informações insufic
 
 ## Limites
 Este registro **não autoriza** a IA a inventar preços, prometer gratuidade, confirmar cobertura ou realizar agendamentos sem consulta às fontes e ferramentas oficiais. Não representa implantação do sistema automatizado.
+
+## Complemento informado pela direção — marcas e orçamento (14/11/2026)
+- A Winservice atende equipamentos de qualquer marca, observada a necessidade de verificar o tipo de equipamento e a solicitação.
+- Para **lava e seca LG** e **lava e seca Samsung**, **não é cobrada a avaliação/orçamento**.
+- Para **lava e seca de outras marcas**, a avaliação/orçamento é cobrada, conforme declaração da direção.
+- **Valor da cobrança não informado**; não presumir valores ou condições adicionais.
+- **Pendente de confirmação:** se a afirmação sobre cobrança para “o restante” também abrange outras categorias de equipamentos, ou apenas lava e seca de outras marcas.
+- A regra de cobrança também havia sido descrita como dependente da região; faltam detalhamento de exceções e conciliação dessa variável com as regras acima.
