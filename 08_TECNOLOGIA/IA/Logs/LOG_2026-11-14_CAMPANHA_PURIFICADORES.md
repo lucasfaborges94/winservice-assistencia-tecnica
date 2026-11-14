@@ -46,3 +46,4 @@ Foi criado um painel HTML na Área de Trabalho com o progresso e uma leitura dos
 - Publicado o ID G-R682YRL8V4 na mesma tag da landing page. O evento whatsapp_click envia a posição do botão. A conversão Contato continua direcionada à conta Google Ads da campanha.
 - Confirmado na URL pública que o clique de teste envia os dois eventos. O GA4 retornou HTTP 204 e o Google Ads retornou HTTP 200. O teste não enviou mensagem de WhatsApp nem comprovou atribuição a um anúncio.
 - Confirmado o status Pausada da campanha com orçamento de R$ 50/dia.
+- Conferido o teto de CPC de R$ 5,00 e configurada a meta específica Contatos para a campanha.

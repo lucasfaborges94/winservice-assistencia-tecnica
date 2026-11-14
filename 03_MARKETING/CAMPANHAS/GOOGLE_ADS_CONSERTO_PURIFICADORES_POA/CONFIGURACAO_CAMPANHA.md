@@ -13,7 +13,9 @@
 | Orçamento médio | R$ 50,00/dia |
 | Praça confirmada | Porto Alegre, Rio Grande do Sul, Brasil |
 | Estratégia confirmada | Maximizar cliques |
-| Teto de CPC e opção de local | R$ 5 e presença registrados no rascunho. Conferir no painel final. |
+| Teto de CPC confirmado | R$ 5,00 |
+| Opção de local | Presença selecionada no rascunho. A cidade de Porto Alegre foi confirmada no painel final. |
+| Meta específica da campanha | Contatos (site) |
 | Destino | https://winservicers.com/conserto-purificadores/ |
 | Canal de contato | WhatsApp (51) 98145-9630 |
 | Recurso de chamada divergente | Pausado |
