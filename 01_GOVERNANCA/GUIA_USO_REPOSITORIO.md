@@ -1,48 +1,54 @@
 # GUIA DE USO DO REPOSITÓRIO — Winservice
 
-**Status:** Em elaboração — proposta sujeita à aprovação  
-**Versão:** 0.1  
+**Status:** Vigente  
+**Versão:** 1.0  
+**Aprovador:** Direção  
+**Data de aprovação e vigência:** 14/11/2026  
 **Repositório:** `lucasfaborges94/winservice-assistencia-tecnica`  
-**Branch principal:** `main`
+**Branch oficial:** `main`
 
-## Finalidade
-Preservar o conhecimento institucional, regras, decisões, processos e histórico da Winservice. O GitHub é a fonte oficial versionada. Arquivos anexados ao projeto ChatGPT são cópias de consulta e exigem atualização manual após mudanças relevantes.
+## Finalidade e fontes
+O GitHub é a fonte institucional oficial, versionada. As fontes do projeto ChatGPT são cópias de consulta, não sincronizadas automaticamente. Ao atualizar documentos centrais no GitHub, sinalizar que as cópias anexadas devem ser substituídas. Em divergência, conferir a versão vigente no GitHub.
 
-## Arquivos-padrão por diretório
-- `AGENTES.md`: instruções operacionais do agente para aquele escopo.
-- `CONTEXTO.md`: resumo do estado, objetivos, decisões e documentos importantes daquele escopo.
-- Outros arquivos: políticas, POPs, registros, planos, indicadores e evidências, conforme necessidade.
+## Arquivos estruturais
+- `AGENTES.md`: instruções do agente válidas no diretório e em seus descendentes.
+- `CONTEXTO.md`: resumo contextual da área, seus objetivos, estado atual, decisões relevantes e referências para documentos-fonte.
+- Arquivos temáticos: políticas, POPs, planos, relatórios, decisões e registros.
 
-Na raiz, `AGENTES.md` e `CONTEXTO.md` são globais. Diretórios novos de trabalho devem receber ambos, salvo justificativa explícita. Diretórios existentes podem ser adequados progressivamente.
+Na raiz, ambos os arquivos são globais. Criar os dois em novos diretórios de trabalho, salvo exceção justificada. Adaptar diretórios existentes progressivamente, sem gerar arquivos vazios ou redundantes.
 
-## Leitura hierárquica
-Para atuar em `02_COMERCIAL/ATENDIMENTO/`, ler, quando existentes:
-1. `/AGENTES.md` e `/CONTEXTO.md`;
-2. `/02_COMERCIAL/AGENTES.md` e `/02_COMERCIAL/CONTEXTO.md`;
-3. `/02_COMERCIAL/ATENDIMENTO/AGENTES.md` e `/02_COMERCIAL/ATENDIMENTO/CONTEXTO.md`;
-4. documentos específicos necessários.
+## Consulta hierárquica
+Para trabalhar em `02_COMERCIAL/ATENDIMENTO/`, considerar nesta ordem:
+1. Os quatro documentos centrais aprovados.
+2. `/AGENTES.md` e `/CONTEXTO.md`.
+3. `/02_COMERCIAL/AGENTES.md` e `/02_COMERCIAL/CONTEXTO.md`, se existirem.
+4. `/02_COMERCIAL/ATENDIMENTO/AGENTES.md` e `/02_COMERCIAL/ATENDIMENTO/CONTEXTO.md`, se existirem.
+5. Documentos especializados necessários.
 
-Regras locais detalham, mas não anulam, regras globais. Contradições exigem esclarecimento ou revisão formal.
+Regras locais detalham regras superiores, mas não as revogam. Em conflito, interromper a aplicação da regra conflitante e pedir revisão ou esclarecimento.
 
-## Atualização hierárquica de contexto
-1. Alterar primeiro o documento que é a fonte principal do fato ou decisão.
-2. Atualizar o `CONTEXTO.md` do diretório correspondente quando o resumo for afetado.
-3. Subir a árvore, avaliando cada `CONTEXTO.md` ancestral. Atualizar apenas os que precisam refletir a mudança em nível resumido.
-4. Não atualizar automaticamente `CONTEXTO.md` descendentes quando um ancestral mudar. Se houver possível impacto, registrar pendência de revisão nos descendentes afetados.
-5. Não duplicar detalhes em todos os níveis; usar sínteses e caminhos relativos para as fontes.
+## Atualização de contextos
+1. Registrar alterações na fonte primária (decisão, processo, política ou registro).
+2. Atualizar o `CONTEXTO.md` local se a mudança afetar seu resumo.
+3. Avaliar cada ancestral, de baixo para cima, até a raiz; atualizar apenas os resumos materialmente afetados.
+4. Uma mudança em ancestral não provoca atualização automática de descendentes. Verificar impacto e registrar pendência de revisão quando necessário.
+5. Contextos resumem e apontam para fontes; não duplicam integralmente o conteúdo de outros documentos.
 
-## Regras de escrita
-- Consultar o arquivo existente e sua versão atual antes de editar.
-- Respeitar os status documentais; um commit não significa aprovação.
-- Manter títulos claros, escopo, status, versão e histórico quando apropriado.
-- Não declarar implantação de processo apenas porque foi documentado.
-- Não incluir senhas, tokens ou dados pessoais desnecessários.
-- Preferir mudanças pequenas, rastreáveis e mensagens de commit descritivas.
-- Submeter documentos sensíveis ou mudanças de política à direção para aprovação.
-- Não alterar a governança existente silenciosamente; enquanto `GOVERNANCA_DOCUMENTAL.md` estiver pendente de aprovação, sinalizar conflitos e solicitar decisão.
+## Controle de mudanças
+- Ler a versão atual do arquivo antes de editar; evitar sobrescrever alterações recentes.
+- Documentos controlados devem indicar status, versão, escopo e aprovação quando aplicável.
+- A publicação no GitHub não representa aprovação. Somente autorização expressa da direção ou delegado pode aprovar.
+- Distinguir `Aprovado` de `Vigente`, quando houver data de entrada em vigor diferente.
+- Usar commits claros, preferir mudanças pequenas e preservar histórico.
+- Alterações de política, exclusões e decisões sensíveis exigem autorização explícita.
+- Não guardar segredos, tokens ou dados pessoais desnecessários.
+- O histórico do Git não substitui aprovação formal nem plano de backup.
 
-## Fontes do projeto ChatGPT
-Manter anexadas cópias dos documentos centrais de baixa volatilidade. Incluir versão ou data de atualização; após alteração no GitHub, atualizar manualmente os anexos. Em divergências, confirmar a versão oficial no repositório.
+## Relação com a norma documental anterior
+Este guia rege a organização e a atuação do agente desde sua aprovação. `01_GOVERNANCA/GOVERNANCA_DOCUMENTAL.md` permanece **minuta não aprovada** e pode subsidiar uma futura revisão, mas não deve ser tratado como política vigente. Havendo divergência, prevalece este guia até decisão expressa da direção.
 
-## Critérios para consulta
-A leitura dos documentos centrais é a regra para trabalhos substantivos; não reler arquivos irrelevantes nem afirmar acesso inexistente. Para alterações, verificar o conteúdo e o estado atual no GitHub.
+## Anexos do ChatGPT
+Anexar os quatro documentos centrais como fontes do projeto, mantendo nome e versão. Sempre que forem alterados, atualizar manualmente as cópias. A consulta obrigatória pode usar essas fontes quando acessíveis; antes de editar ou decidir sobre versões atuais, conferir o GitHub. Não declarar consulta se não houver acesso real.
+
+## Histórico
+- 1.0 — 14/11/2026: guia aprovado e harmonizado com as regras globais do agente.
