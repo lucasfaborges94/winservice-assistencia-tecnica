@@ -45,3 +45,11 @@ Este registro **não autoriza** a IA a inventar preços, prometer gratuidade, co
 - Regra específica já informada: para **lava e seca LG e Samsung**, não cobrar orçamento; para outras marcas de lava e seca, há cobrança, sujeita à futura matriz de valores e exceções.
 - **Pendências:** relação de categorias de equipamentos; marcas especializadas, neutras e problemáticas em cada categoria; valores e exceções regionais; tratamento comercial de cada classe.
 - Até a matriz estar definida, o agente deve consultar uma regra aprovada ou encaminhar para confirmação humana, sem inventar preços ou isenções.
+
+## Decisão da direção — identificação de atendimento existente (14/11/2026)
+- Ao receber mensagem no WhatsApp, o sistema procura o contato pelo identificador/número normalizado e consulta os atendimentos existentes, sem assumir que um número corresponda a um único atendimento.
+- **Regra aprovada:** a IA deve tentar inferir pelo conteúdo da mensagem se o cliente deseja continuar um atendimento aberto ou iniciar outro, **perguntando apenas quando houver dúvida**.
+- Se a intenção corresponder claramente a um atendimento existente, retomar o contexto e o estado desse atendimento; se for um novo equipamento ou uma nova solicitação distinta, criar atendimento separado para o mesmo contato.
+- Proposta técnica: persistir clientes/contatos, atendimentos e mensagens em entidades separadas, com identificador único por atendimento; validar a escolha do atendimento e evitar duplicações antes de qualquer transição de estado.
+- Não expor dados sensíveis de atendimentos anteriores apenas por correspondência de número; exigir confirmação adicional quando necessário.
+- Esta regra está documentada, mas a automação ainda não foi implementada.
