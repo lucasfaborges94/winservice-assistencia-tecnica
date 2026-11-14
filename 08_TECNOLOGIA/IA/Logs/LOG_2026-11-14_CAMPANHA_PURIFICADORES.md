@@ -38,3 +38,11 @@ Foi criado um painel HTML na Área de Trabalho com o progresso e uma leitura dos
 - A validação do recebimento da conversão pelo Google Ads, a lista de negativas e a implantação do GA4 no domínio ainda estão pendentes.
 
 [Registro atualizado de Marketing](../../../03_MARKETING/CAMPANHAS/GOOGLE_ADS_CONSERTO_PURIFICADORES_POA/README.md)
+
+## Validação final da campanha e da medição
+
+- Aplicadas e conferidas 16 palavras-chave negativas de frase no nível da campanha.
+- Criado o fluxo GA4 “Winservice | Purificadores” para winservicers.com na propriedade Win Service. O fluxo web anterior pertence a outro domínio e foi preservado.
+- Publicado o ID G-R682YRL8V4 na mesma tag da landing page. O evento whatsapp_click envia a posição do botão. A conversão Contato continua direcionada à conta Google Ads da campanha.
+- Confirmado na URL pública que o clique de teste envia os dois eventos. O GA4 retornou HTTP 204 e o Google Ads retornou HTTP 200. O teste não enviou mensagem de WhatsApp nem comprovou atribuição a um anúncio.
+- Confirmado o status Pausada da campanha com orçamento de R$ 50/dia.
