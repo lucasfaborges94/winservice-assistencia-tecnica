@@ -28,6 +28,11 @@
     .logo-grid { display:grid; grid-template-columns:minmax(0,1fr) clamp(48px,12vw,100px); align-items:center; gap:14px; min-height:150px; }
     .logo-grid img { display:block; width:100%; height:auto; }
     .label { margin-bottom:7px; font-size:14px; font-weight:700; color:var(--ws-text-muted); }
+    .icon-grid { display:grid; grid-template-columns:repeat(5,minmax(0,1fr)); gap:10px; }
+    .icon-card { display:grid; justify-items:center; gap:8px; min-width:0; padding:18px 10px; border:1px solid var(--ws-border); border-radius:var(--ws-radius-card); background:var(--ws-surface); text-align:center; }
+    .icon-preview { display:block; width:32px; height:32px; background:var(--ws-text); -webkit-mask:var(--icon-url) center/contain no-repeat; mask:var(--icon-url) center/contain no-repeat; }
+    .icon-card strong { font-size:13px; }
+    .icon-card code { overflow-wrap:anywhere; font-size:11px; color:var(--ws-text-muted); }
     .swatch-grid { display:grid; grid-template-columns:repeat(4,minmax(0,1fr)); gap:10px; }
     .swatch { min-width:0; background:var(--ws-surface); border:1px solid var(--ws-border); border-radius:12px; overflow:hidden; }
     .swatch-sample { display:block; height:52px; background:var(--sample); border-bottom:1px solid var(--ws-border); }
@@ -44,7 +49,7 @@
     .states { display:flex; gap:12px; flex-wrap:wrap; margin-block:15px; font-size:14px; font-weight:700; }
     a { color:var(--ws-link); text-underline-offset:3px; }
     footer { margin-top:36px; display:flex; gap:14px; flex-wrap:wrap; }
-    @media (max-width:700px) { .grid { grid-template-columns:1fr; } .swatch-grid { grid-template-columns:repeat(2,minmax(0,1fr)); } main { padding-top:32px; } }
+    @media (max-width:700px) { .grid { grid-template-columns:1fr; } .swatch-grid { grid-template-columns:repeat(2,minmax(0,1fr)); } .icon-grid { grid-template-columns:repeat(3,minmax(0,1fr)); } main { padding-top:32px; } }
   </style>
 </head>
 <body>
@@ -79,6 +84,12 @@
           </div>
         </article>
       </div>
+    </section>
+    <section aria-labelledby="icons-title">
+      <h2 id="icons-title">Ícones da marca</h2>
+      <p class="lede">Quinze ícones SVG em grade de 24 px. O traço acompanha a cor do tema quando aplicado como máscara CSS.</p>
+      <div id="icon-gallery" class="icon-grid" style="margin-top:16px"></div>
+      <p class="lede">Use rótulos para ações; ícones apenas decorativos devem ficar ocultos para leitores de tela. <a href="icones/README.md">Como usar os ícones</a>.</p>
     </section>
     <section aria-labelledby="palette-title">
       <h2 id="palette-title">Paleta do tema</h2>
@@ -174,6 +185,19 @@
       return button;
     }
 
+    const iconNames = [
+      ['tema-sistema','Sistema'],['tema-claro','Claro'],['tema-escuro','Escuro'],
+      ['ferramenta','Ferramenta'],['gota','Água'],['local','Local'],
+      ['conversa','Conversa'],['relogio','Relógio'],['escudo','Proteção'],
+      ['telefone','Telefone'],['verificar','Verificar'],['seta-direita','Próximo'],
+      ['vazamento','Vazamento'],['vazao','Vazão'],['frio','Frio']
+    ];
+    document.getElementById('icon-gallery').replaceChildren(...iconNames.map(([file, label]) => {
+      const card = document.createElement('div');
+      card.className = 'icon-card';
+      card.innerHTML = `<span class="icon-preview" style="--icon-url:url('icones/${file}.svg')" aria-hidden="true"></span><strong>${label}</strong><code>${file}.svg</code>`;
+      return card;
+    }));
     function renderTheme() {
       if (choice === 'system') delete root.dataset.theme;
       else root.dataset.theme = choice;

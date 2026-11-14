@@ -3,7 +3,7 @@
 Versão 1.0 · 14/11/2026 · Marketing  
 Direção visual selecionada: monograma **WS** · Assinatura: **Assistência Técnica**
 
-[Abrir o guia visual](guia-visual.html) · [Variáveis CSS](winservice.css) · [Tokens JSON](tokens.json)
+[Abrir o guia visual](index.html) · [Variáveis CSS](winservice.css) · [Tokens JSON](tokens.json)
 
 ## Logos
 
@@ -15,6 +15,10 @@ Direção visual selecionada: monograma **WS** · Assinatura: **Assistência Té
 Use o SVG em interfaces e arquivos editáveis. A assinatura horizontal em SVG tem texto convertido em contornos e abre com o mesmo desenho em máquinas sem as fontes. Use os PNGs transparentes em documentos, redes sociais e ferramentas que não aceitam SVG. Exporte o quadrado com fundo sólido do próprio tema se a plataforma exigir um arquivo sem transparência.
 
 Reserve ao redor da marca pelo menos ¼ do lado do bloco do monograma, contado a partir da borda visível. Para a assinatura completa, use largura mínima recomendada de 250 px na tela ou 55 mm no impresso. Em áreas menores, use o quadrado, a partir de 32 px ou 8 mm. Preserve a proporção e as cores. Sobre fotos, coloque a marca em uma superfície sólida.
+
+## Ícones
+
+A pasta [icones/](icones/) reúne 15 SVGs em grade de 24 px com traço de 1,8. Inclui modos de tema, atendimento, água, localização, comunicação e estados. Consulte o [manual dos ícones](icones/README.md) e a galeria no guia. Em interfaces, aplique os arquivos como máscara CSS para herdar a cor do tema; mantenha um rótulo para ações.
 
 ## Paleta
 
@@ -61,4 +65,4 @@ O CSS segue o tema do sistema por padrão. Defina `data-theme="light"` ou `data-
 
 ## Origem e manutenção
 
-O monograma WS escolhido foi explorado com GPT Imagens a partir do [logo anterior](https://winservicers.com/assets/logo.png) e refinado em vetor. Os arquivos desta pasta são a referência para novos materiais. Registre alterações de cores e geometria nesta pasta para manter a marca consistente entre canais.
+O monograma WS escolhido foi explorado com GPT Imagens a partir do [logo anterior](https://winservicers.com/assets/logo.png) e refinado em vetor. O kit está publicado em https://winservicers.com/identidade/. Os arquivos desta pasta são a referência para novos materiais. Registre alterações de cores e geometria nesta pasta para manter a marca consistente entre canais.

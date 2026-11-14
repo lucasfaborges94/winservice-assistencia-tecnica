@@ -1,0 +1,241 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Identidade visual · Winservice</title>
+  <link rel="stylesheet" href="winservice.css">
+  <style>
+    * { box-sizing: border-box; }
+    body { margin: 0; background: var(--ws-canvas); color: var(--ws-text); font: var(--ws-body-size)/var(--ws-body-line) var(--ws-font); }
+    .wrap { width: min(1100px, calc(100% - 36px)); margin: auto; }
+    .bar { display:flex; flex-wrap:wrap; gap:16px; align-items:center; justify-content:space-between; min-height:84px; padding-block:12px; border-bottom:1px solid var(--ws-border); }
+    .bar img { display:block; width:238px; max-width:100%; }
+    .choices { display:flex; flex-wrap:wrap; gap:6px; }
+    .choices button { min-height:44px; }
+    [aria-pressed="true"] { box-shadow:inset 0 -3px var(--ws-focus); }
+    main { padding-block:48px 64px; }
+    h1,h2,h3,p { margin:0; }
+    h1 { max-width:720px; font-size:var(--ws-display-size); line-height:1.05; letter-spacing:-.045em; }
+    h2 { margin:0 0 16px; font-size:var(--ws-heading-size); line-height:1.15; letter-spacing:-.025em; }
+    h3 { font-size:16px; }
+    p { color:var(--ws-text-muted); }
+    .lede { margin-top:12px; max-width:60ch; }
+    .rule { width:48px; height:5px; border-radius:4px; background:var(--ws-amber); margin-bottom:20px; }
+    section { margin-top:44px; }
+    .grid { display:grid; grid-template-columns:1fr 1fr; gap:16px; }
+    .card { border:1px solid var(--ws-border); border-radius:var(--ws-radius-card); background:var(--ws-surface); color:var(--ws-text); padding:20px; }
+    .logo-grid { display:grid; grid-template-columns:minmax(0,1fr) clamp(48px,12vw,100px); align-items:center; gap:14px; min-height:150px; }
+    .logo-grid img { display:block; width:100%; height:auto; }
+    .label { margin-bottom:7px; font-size:14px; font-weight:700; color:var(--ws-text-muted); }
+    .icon-grid { display:grid; grid-template-columns:repeat(5,minmax(0,1fr)); gap:10px; }
+    .icon-card { display:grid; justify-items:center; gap:8px; min-width:0; padding:18px 10px; border:1px solid var(--ws-border); border-radius:var(--ws-radius-card); background:var(--ws-surface); text-align:center; }
+    .icon-preview { display:block; width:32px; height:32px; background:var(--ws-text); -webkit-mask:var(--icon-url) center/contain no-repeat; mask:var(--icon-url) center/contain no-repeat; }
+    .icon-card strong { font-size:13px; }
+    .icon-card code { overflow-wrap:anywhere; font-size:11px; color:var(--ws-text-muted); }
+    .swatch-grid { display:grid; grid-template-columns:repeat(4,minmax(0,1fr)); gap:10px; }
+    .swatch { min-width:0; background:var(--ws-surface); border:1px solid var(--ws-border); border-radius:12px; overflow:hidden; }
+    .swatch-sample { display:block; height:52px; background:var(--sample); border-bottom:1px solid var(--ws-border); }
+    .swatch strong,.swatch code { display:block; margin-inline:10px; }
+    .swatch strong { margin-top:8px; font-size:13px; }
+    .swatch code { margin-bottom:8px; color:var(--ws-text-muted); font-size:12px; }
+    .swatch-actions { display:flex; flex-wrap:wrap; gap:6px; margin:8px 8px 10px; }
+    .swatch-actions .ws-button { flex:1 0 auto; padding:6px 8px; font-size:12px; }
+    .copy-status { min-height:1.55em; margin:-8px 0 12px; font-size:14px; }
+    .actions { display:flex; gap:8px; flex-wrap:wrap; margin-block:14px; }
+    .field { display:grid; gap:5px; max-width:360px; font-size:14px; font-weight:700; }
+    .field input { min-height:44px; padding:8px 12px; border:1px solid var(--ws-control-border); border-radius:8px; color:var(--ws-text); background:var(--ws-canvas); font:inherit; }
+    .field input::placeholder { color:var(--ws-text-muted); }
+    .states { display:flex; gap:12px; flex-wrap:wrap; margin-block:15px; font-size:14px; font-weight:700; }
+    a { color:var(--ws-link); text-underline-offset:3px; }
+    footer { margin-top:36px; display:flex; gap:14px; flex-wrap:wrap; }
+    @media (max-width:700px) { .grid { grid-template-columns:1fr; } .swatch-grid { grid-template-columns:repeat(2,minmax(0,1fr)); } .icon-grid { grid-template-columns:repeat(3,minmax(0,1fr)); } main { padding-top:32px; } }
+  </style>
+</head>
+<body>
+  <header class="wrap bar">
+    <img id="header-logo" src="logos/logo-horizontal-claro.svg" alt="Winservice, Assistência Técnica" width="238" height="62">
+    <div class="choices" role="group" aria-label="Tema da prévia">
+      <button class="ws-button ws-button--secondary ws-focus" type="button" data-choice="system" aria-pressed="true">Sistema</button>
+      <button class="ws-button ws-button--secondary ws-focus" type="button" data-choice="light" aria-pressed="false">Claro</button>
+      <button class="ws-button ws-button--secondary ws-focus" type="button" data-choice="dark" aria-pressed="false">Escuro</button>
+    </div>
+  </header>
+  <main class="wrap">
+    <div class="rule" aria-hidden="true"></div>
+    <h1>Identidade visual</h1>
+    <p class="lede">Monograma WS, azul marinho e âmbar. Os mesmos elementos para a assistência técnica no site, nos documentos e nas redes sociais.</p>
+
+    <section aria-labelledby="logos-title">
+      <h2 id="logos-title">Logos</h2>
+      <div class="grid">
+        <article class="card" data-theme="light">
+          <h3 class="label">Fundo claro</h3>
+          <div class="logo-grid">
+            <img src="logos/logo-horizontal-claro.svg" alt="Assinatura Winservice para fundo claro" width="880" height="230">
+            <img src="logos/logo-quadrado-claro.svg" alt="WS âmbar sobre azul marinho" width="1000" height="1000">
+          </div>
+        </article>
+        <article class="card" data-theme="dark">
+          <h3 class="label">Fundo escuro</h3>
+          <div class="logo-grid">
+            <img src="logos/logo-horizontal-escuro.svg" alt="Assinatura Winservice para fundo escuro" width="880" height="230">
+            <img src="logos/logo-quadrado-escuro.svg" alt="WS azul marinho sobre âmbar" width="1000" height="1000">
+          </div>
+        </article>
+      </div>
+    </section>
+    <section aria-labelledby="icons-title">
+      <h2 id="icons-title">Ícones da marca</h2>
+      <p class="lede">Quinze ícones SVG em grade de 24 px. O traço acompanha a cor do tema quando aplicado como máscara CSS.</p>
+      <div id="icon-gallery" class="icon-grid" style="margin-top:16px"></div>
+      <p class="lede">Use rótulos para ações; ícones apenas decorativos devem ficar ocultos para leitores de tela. <a href="icones/README.md">Como usar os ícones</a>.</p>
+    </section>
+    <section aria-labelledby="palette-title">
+      <h2 id="palette-title">Paleta do tema</h2>
+      <p id="copy-status" class="copy-status" role="status"></p>
+      <div id="swatches" class="swatch-grid"></div>
+    </section>
+    <section aria-labelledby="ui-title">
+      <h2 id="ui-title">Exemplo de interface</h2>
+      <div class="grid">
+        <article class="card">
+          <h3>Solicite atendimento</h3>
+          <p>Informe o equipamento e descreva o que aconteceu.</p>
+          <div class="actions">
+            <button class="ws-button ws-focus" type="button">Pedir orçamento</button>
+            <button class="ws-button ws-button--secondary ws-focus" type="button">Ver serviços</button>
+          </div>
+          <label class="field">Modelo do equipamento <input class="ws-focus" placeholder="Ex.: código na etiqueta"></label>
+        </article>
+        <article class="card">
+          <h3>Acompanhamento</h3>
+          <p>Os estados usam cor e texto para que o significado continue claro em qualquer tema.</p>
+          <div class="states"><span style="color:var(--ws-success)">✓ Concluído</span><span style="color:var(--ws-warning)">● Em avaliação</span><span style="color:var(--ws-error)">! Requer atenção</span></div>
+          <a class="ws-focus" href="README.md">Consultar orientações da marca</a>
+        </article>
+      </div>
+    </section>
+    <footer>
+      <a class="ws-focus" href="README.md">Manual de uso</a>
+      <a class="ws-focus" href="tokens.json">Tokens JSON</a>
+      <a class="ws-focus" href="winservice.css">Variáveis CSS</a>
+    </footer>
+  </main>
+  <script>
+    const root = document.documentElement;
+    const scheme = matchMedia('(prefers-color-scheme: dark)');
+    const choices = document.querySelectorAll('[data-choice]');
+    const palette = document.querySelector('#swatches');
+    const copyStatus = document.querySelector('#copy-status');
+    const colors = [
+      ['Azul marinho', 'navy'], ['Âmbar', 'amber'], ['Branco frio', 'paper'],
+      ['Fundo', 'canvas'], ['Superfície', 'surface'], ['Fundo alternado', 'surface-alt'],
+      ['Texto principal', 'text'], ['Texto secundário', 'text-muted'],
+      ['Link', 'link'], ['Sucesso', 'success'], ['Aviso', 'warning'], ['Erro', 'error']
+    ];
+    let choice = 'system';
+    try { choice = localStorage.getItem('winservice-theme') || choice; } catch {}
+    if (!['system', 'light', 'dark'].includes(choice)) choice = 'system';
+
+    async function copyText(text) {
+      try {
+        await navigator.clipboard.writeText(text);
+        return true;
+      } catch {
+        // A cópia em arquivos HTML abertos localmente pode depender do navegador.
+      }
+
+      const active = document.activeElement;
+      const field = document.createElement('textarea');
+      field.value = text;
+      field.readOnly = true;
+      field.tabIndex = -1;
+      field.style.cssText = 'position:fixed;inset:0 auto auto 0;opacity:0;pointer-events:none';
+      document.body.append(field);
+      try {
+        field.focus({ preventScroll: true });
+        field.select();
+        return document.execCommand('copy');
+      } catch {
+        return false;
+      } finally {
+        field.remove();
+        active?.focus({ preventScroll: true });
+      }
+    }
+
+    function copyButton(caption, label, value, message) {
+      const button = document.createElement('button');
+      button.type = 'button';
+      button.className = 'ws-button ws-button--secondary ws-focus';
+      button.textContent = caption;
+      button.setAttribute('aria-label', caption + ' de ' + label);
+      let resetLabel;
+      button.addEventListener('click', async () => {
+        const copied = await copyText(value);
+        if (!button.isConnected) return;
+        clearTimeout(resetLabel);
+        button.textContent = copied ? 'Copiado!' : caption;
+        copyStatus.textContent = copied ? message : 'A cópia automática falhou. Selecione o texto e copie manualmente.';
+        if (copied) {
+          resetLabel = setTimeout(() => { button.textContent = caption; }, 1800);
+        }
+      });
+      return button;
+    }
+
+    const iconNames = [
+      ['tema-sistema','Sistema'],['tema-claro','Claro'],['tema-escuro','Escuro'],
+      ['ferramenta','Ferramenta'],['gota','Água'],['local','Local'],
+      ['conversa','Conversa'],['relogio','Relógio'],['escudo','Proteção'],
+      ['telefone','Telefone'],['verificar','Verificar'],['seta-direita','Próximo'],
+      ['vazamento','Vazamento'],['vazao','Vazão'],['frio','Frio']
+    ];
+    document.getElementById('icon-gallery').replaceChildren(...iconNames.map(([file, label]) => {
+      const card = document.createElement('div');
+      card.className = 'icon-card';
+      card.innerHTML = `<span class="icon-preview" style="--icon-url:url('icones/${file}.svg')" aria-hidden="true"></span><strong>${label}</strong><code>${file}.svg</code>`;
+      return card;
+    }));
+    function renderTheme() {
+      if (choice === 'system') delete root.dataset.theme;
+      else root.dataset.theme = choice;
+      const isDark = choice === 'dark' || (choice === 'system' && scheme.matches);
+      const logo = document.querySelector('#header-logo');
+      logo.src = 'logos/logo-horizontal-' + (isDark ? 'escuro' : 'claro') + '.svg';
+      choices.forEach(button => button.setAttribute('aria-pressed', button.dataset.choice === choice));
+      copyStatus.textContent = '';
+      const styles = getComputedStyle(root);
+      palette.replaceChildren(...colors.map(([label, name]) => {
+        const value = styles.getPropertyValue('--ws-' + name).trim();
+        const card = document.createElement('div');
+        const sample = document.createElement('span');
+        const title = document.createElement('strong');
+        const code = document.createElement('code');
+        const actions = document.createElement('div');
+        card.className = 'swatch';
+        sample.className = 'swatch-sample';
+        sample.style.setProperty('--sample', value);
+        sample.setAttribute('aria-hidden', 'true');
+        title.textContent = label;
+        code.textContent = value;
+        actions.className = 'swatch-actions';
+        actions.append(
+          copyButton('Copiar HEX', label, value, 'Código ' + value + ' copiado.'),
+          copyButton('Copiar nome', label, label, 'Nome “' + label + '” copiado.')
+        );
+        card.append(sample, title, code, actions);
+        return card;
+      }));
+    }
+    choices.forEach(button => button.addEventListener('click', () => {
+      choice = button.dataset.choice;
+      try { localStorage.setItem('winservice-theme', choice); } catch {}
+      renderTheme();
+    }));
+    scheme.addEventListener('change', renderTheme);
+    renderTheme();
+  </script>
+</body>
+</html>
