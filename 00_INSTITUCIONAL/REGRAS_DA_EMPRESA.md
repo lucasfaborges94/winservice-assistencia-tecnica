@@ -1,22 +1,24 @@
 # REGRAS DA EMPRESA — Winservice
 
-**Status:** Em elaboração — proposta sujeita à aprovação do fundador  
-**Versão:** 0.1
+**Status:** Vigente — diretrizes gerais de gestão  
+**Versão:** 1.0  
+**Aprovador:** Direção  
+**Data de aprovação e vigência:** 14/11/2026
 
-## Princípios propostos
-1. **Cliente e qualidade:** comunicar-se com clareza, cumprir compromissos e acompanhar a qualidade do serviço.
-2. **Segurança e conformidade:** observar requisitos técnicos, normas aplicáveis, direitos do consumidor, proteção de dados e segurança do trabalho.
-3. **Sustentabilidade financeira:** avaliar custos, margens, caixa e retorno antes de assumir despesas e compromissos relevantes.
-4. **Processos e rastreabilidade:** registrar atendimentos, diagnósticos, orçamentos, aprovações, execução, garantia e ocorrências conforme os processos aprovados.
-5. **Responsabilidade:** atribuir responsáveis e critérios de acompanhamento a atividades e projetos importantes.
-6. **Melhoria contínua:** medir conversão, produtividade, satisfação, retrabalho e resultados, conforme indicadores formalizados.
-7. **Crescimento responsável:** ampliar equipe, infraestrutura e área de atuação segundo demanda comprovada e capacidade financeira.
-8. **Governança:** distinguir propostas de decisões aprovadas; preservar histórico e evitar documentação contraditória.
-9. **Confidencialidade:** limitar exposição de dados de clientes, funcionários, fornecedores e credenciais.
-10. **Autoridade:** decisões estratégicas, contratações, investimentos e aprovação de políticas dependem da direção ou de delegação expressa.
+## Diretrizes
+1. **Cliente e qualidade:** atendimento claro, respeitoso, rastreável e orientado à solução; compromissos devem ser comunicados e acompanhados.
+2. **Segurança e conformidade:** observar exigências técnicas, segurança do trabalho, direitos do consumidor, LGPD e demais obrigações aplicáveis.
+3. **Responsabilidade financeira:** avaliar custos, margens, fluxo de caixa, risco e retorno antes de despesas ou investimentos relevantes.
+4. **Controle operacional:** buscar registros confiáveis de atendimento, diagnóstico, orçamento, autorização, serviço, garantia e ocorrências, conforme processos específicos aprovados.
+5. **Responsabilidades claras:** definir responsáveis, entregáveis e acompanhamento para iniciativas relevantes.
+6. **Melhoria contínua:** acompanhar indicadores apropriados de conversão, produtividade, qualidade, satisfação, retrabalho e resultado financeiro.
+7. **Crescimento sustentável:** contratar, expandir e investir de acordo com demanda, capacidade de execução e disponibilidade financeira.
+8. **Governança:** diferenciar proposta, decisão aprovada, implantação e resultado; preservar histórico e fonte oficial.
+9. **Confidencialidade:** restringir o acesso a dados pessoais, financeiros, contratuais e credenciais conforme necessidade.
+10. **Autoridade:** decisões estratégicas, contratações, investimentos e alterações de políticas dependem da direção ou de delegação expressa.
 
-## Aplicação
-Estes princípios são uma proposta inicial de gestão, não comprovação de políticas já implantadas. Após aprovação, detalhar regras específicas em documentos próprios, sem duplicá-las neste arquivo.
+## Limites de aplicação
+Estas são diretrizes gerenciais aprovadas, não prova de que cada processo operacional já foi implantado. Regras específicas de preços, descontos, garantias, alçadas financeiras, contratação e atendimento devem ser definidas em documentos próprios e aprovadas antes de serem tratadas como procedimentos vigentes.
 
-## Pendências para aprovação
-Validar políticas de atendimento, garantias, precificação, autorização de despesas, papéis e responsabilidades, privacidade, qualidade e gestão de pessoas.
+## Histórico
+- 1.0 — 14/11/2026: diretrizes gerais aprovadas pela direção.
