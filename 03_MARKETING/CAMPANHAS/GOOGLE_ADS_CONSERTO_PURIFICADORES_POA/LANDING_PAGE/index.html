@@ -34,30 +34,28 @@
     .faq summary:after{color:#174785}.final-cta{background:#EDF2F8}.footer{background:#09172C}
     .wa-float{background:#FFA700;color:#001439;box-shadow:0 9px 25px rgba(0,20,57,.28)}
     :where(a,button,summary):focus-visible{outline:3px solid #FFA700;outline-offset:3px}
-    @media(max-width:540px){.brand img{width:172px}.hero:before{background:linear-gradient(90deg,rgba(0,20,57,.97),rgba(0,20,57,.84) 58%,rgba(0,20,57,.48))}}
-    .top-actions{display:flex;align-items:center;gap:12px}.theme-control{display:flex;align-items:center;gap:7px;font-size:12px;font-weight:700;color:#455773}.theme-control select{min-height:44px;padding:0 30px 0 11px;border:1px solid #687A92;border-radius:8px;background:#fff;color:#001439;font:600 13px Inter,"Segoe UI",Arial,sans-serif;cursor:pointer}.logo-dark{display:none!important}
-    :root{--page-bg:#fff;--card-bg:#fff;--alt-bg:#F7F9FC;--section-bg:#EDF2F8;--heading:#001439;--copy:#455773;--card-border:#D0DAE7;--control-bg:#fff;--control-fg:#001439;--control-border:#687A92;--icon-bg:#EDF2F8;--icon-fg:#174785;--theme-label:#455773}
-    :root[data-theme="dark"]{color-scheme:dark;--page-bg:#09172C;--card-bg:#112441;--alt-bg:#09172C;--section-bg:#19334F;--heading:#F7F9FC;--copy:#BECDDF;--card-border:#344C67;--control-bg:#112441;--control-fg:#F7F9FC;--control-border:#8199B4;--icon-bg:#19334F;--icon-fg:#9CCAFF;--theme-label:#BECDDF}
-    @media(prefers-color-scheme:dark){:root:not([data-theme]){color-scheme:dark;--page-bg:#09172C;--card-bg:#112441;--alt-bg:#09172C;--section-bg:#19334F;--heading:#F7F9FC;--copy:#BECDDF;--card-border:#344C67;--control-bg:#112441;--control-fg:#F7F9FC;--control-border:#8199B4;--icon-bg:#19334F;--icon-fg:#9CCAFF;--theme-label:#BECDDF}}
-    body{background:var(--page-bg);color:var(--heading)}.topbar,.proof-strip{background:var(--page-bg)}.proof-strip{border-color:var(--card-border)}.theme-control{color:var(--theme-label)}.theme-control select{background:var(--control-bg);color:var(--control-fg);border-color:var(--control-border)}
-    :root[data-theme="dark"] .logo-light{display:none!important}:root[data-theme="dark"] .logo-dark{display:block!important}
-    @media(prefers-color-scheme:dark){:root:not([data-theme]) .logo-light{display:none!important}:root:not([data-theme]) .logo-dark{display:block!important}}
-    .proof strong,.symptom h3,.step h3,.section-head h2,.faq summary,.final-box h2{color:var(--heading)}.proof span,.symptom p,.step p,.section-head p,.faq details p,.final-box p{color:var(--copy)}.symptom-section,.faq{background:var(--alt-bg)}.final-cta{background:var(--section-bg)}.symptom,.step,.faq details{background:var(--card-bg);border-color:var(--card-border)}.proof-icon,.symptom .symbol{background:var(--icon-bg);color:var(--icon-fg)}.section-kicker{color:var(--icon-fg)}.trust .section-kicker{color:#FFC04D}
-    @media(max-width:540px){.topbar{height:auto;min-height:68px;flex-wrap:wrap;padding-block:9px}.top-actions{gap:8px}.theme-control{order:2;width:100%;justify-content:flex-end}.top-actions{display:contents}.top-cta{order:1}.theme-control select{min-height:40px}.brand img{width:172px}}
+    @media(max-width:540px){.brand img{width:172px}.hero{background-position:94% center}.hero:before{background:linear-gradient(90deg,rgba(0,20,57,.97),rgba(0,20,57,.84) 58%,rgba(0,20,57,.48))}}
+    .logo-dark{display:none!important}
+    :root{--page-bg:#fff;--card-bg:#fff;--alt-bg:#F7F9FC;--section-bg:#EDF2F8;--heading:#001439;--copy:#455773;--card-border:#D0DAE7;--icon-bg:#EDF2F8;--icon-fg:#174785}
+    body{background:var(--page-bg);color:var(--heading)}
+    .topbar,.proof-strip{background:var(--page-bg)}.proof-strip{border-color:var(--card-border)}
+    .proof strong,.symptom h3,.step h3,.section-head h2,.faq summary,.final-box h2{color:var(--heading)}
+    .proof span,.symptom p,.step p,.section-head p,.faq details p,.final-box p{color:var(--copy)}
+    .symptom-section,.faq{background:var(--alt-bg)}.final-cta{background:var(--section-bg)}
+    .symptom,.step,.faq details{background:var(--card-bg);border-color:var(--card-border)}
+    .proof-icon,.symptom .symbol{background:var(--icon-bg);color:var(--icon-fg)}.section-kicker{color:var(--icon-fg)}
+    @media(prefers-color-scheme:dark){:root{color-scheme:dark;--page-bg:#09172C;--card-bg:#112441;--alt-bg:#09172C;--section-bg:#19334F;--heading:#F7F9FC;--copy:#BECDDF;--card-border:#344C67;--icon-bg:#19334F;--icon-fg:#9CCAFF}.logo-light{display:none!important}.logo-dark{display:block!important}}
     .ws-icon{display:inline-block;flex:0 0 auto;width:22px;height:22px;background:currentColor;-webkit-mask:var(--icon) center/contain no-repeat;mask:var(--icon) center/contain no-repeat}
-    .icon-tema-sistema{--icon:url('/identidade/icones/tema-sistema.svg')}.icon-tema-claro{--icon:url('/identidade/icones/tema-claro.svg')}.icon-tema-escuro{--icon:url('/identidade/icones/tema-escuro.svg')}
     .icon-local{--icon:url('/identidade/icones/local.svg')}.icon-conversa{--icon:url('/identidade/icones/conversa.svg')}.icon-seta-direita{--icon:url('/identidade/icones/seta-direita.svg')}.icon-frio{--icon:url('/identidade/icones/frio.svg')}.icon-vazamento{--icon:url('/identidade/icones/vazamento.svg')}.icon-vazao{--icon:url('/identidade/icones/vazao.svg')}.icon-ferramenta{--icon:url('/identidade/icones/ferramenta.svg')}
-    .theme-control{position:relative;display:grid;place-items:center;width:44px;height:44px;border:1px solid var(--control-border);border-radius:8px;color:var(--theme-label);background:var(--control-bg);cursor:pointer}.theme-control select{position:absolute;inset:0;width:100%;height:100%;padding:0;opacity:0;cursor:pointer}.theme-control:focus-within{outline:3px solid #FFA700;outline-offset:2px}.theme-control:hover{background:var(--section-bg)}
     .proof-icon .ws-icon,.symbol .ws-icon{width:22px;height:22px}
     .top-cta{min-height:44px}
-    @media(max-width:540px){.topbar{gap:8px}.brand{order:0}.theme-control{order:1;flex:0 0 44px;width:44px;height:44px;margin-left:auto}.top-cta{order:2;width:100%;justify-content:center}.brand img{width:172px}}
-    @media(max-width:380px){.brand img{width:145px}.hero h1{font-size:clamp(34px,10vw,38px)}.symptom-grid{grid-template-columns:1fr}}
+    @media(max-width:380px){.hero h1{font-size:clamp(34px,10vw,38px)}.symptom-grid{grid-template-columns:1fr}}
   </style>
 </head>
 <body>
   <header class="wrap topbar">
     <a class="brand" href="#inicio" aria-label="Winservice Assistência Técnica - início"><img class="logo-light" src="/identidade/logos/logo-horizontal-claro.svg" alt="Winservice Assistência Técnica" width="224" height="59"><img class="logo-dark" src="/identidade/logos/logo-horizontal-escuro.svg" alt="" width="224" height="59"></a>
-    <div class="top-actions"><label class="theme-control" title="Alterar tema"><span id="theme-icon" class="ws-icon icon-tema-sistema" aria-hidden="true"></span><select id="theme-choice" aria-label="Tema da página"><option value="system">Sistema</option><option value="light">Claro</option><option value="dark">Escuro</option></select></label><a class="top-cta wa-link" href="#contato" data-cta="topo">Fale com a equipe <span aria-hidden="true">↗</span></a></div>
+    <a class="top-cta wa-link" href="#contato" data-cta="topo">Fale com a equipe <span aria-hidden="true">↗</span></a>
   </header>
 
   <main>
@@ -139,25 +137,6 @@
   <script>
     // Google Ads conversion tracking will be installed after its conversion action is created.
     // The CTA event is a WhatsApp intent click, not a confirmed or qualified lead.
-    const themeChoice = document.getElementById('theme-choice');
-    const savedTheme = localStorage.getItem('winservice-theme');
-    if (savedTheme === 'light' || savedTheme === 'dark') {
-      document.documentElement.dataset.theme = savedTheme;
-      themeChoice.value = savedTheme;
-    }
-    const themeIcon = document.getElementById('theme-icon');
-    function updateThemeIcon() { themeIcon.className = `ws-icon icon-tema-${themeChoice.value === 'system' ? 'sistema' : themeChoice.value === 'light' ? 'claro' : 'escuro'}`; }
-    updateThemeIcon();
-    themeChoice.addEventListener('change', () => {
-      if (themeChoice.value === 'system') {
-        document.documentElement.removeAttribute('data-theme');
-        localStorage.removeItem('winservice-theme');
-      } else {
-        document.documentElement.dataset.theme = themeChoice.value;
-        localStorage.setItem('winservice-theme', themeChoice.value);
-      }
-      updateThemeIcon();
-    });
     const phone = '5551981459630';
     const message = encodeURIComponent('Olá! Preciso de assistência para meu purificador de água. Marca/modelo: ____. Bairro: ____. Problema: ____.');
     document.querySelectorAll('.wa-link').forEach((link) => {
@@ -173,3 +152,4 @@
   </script>
 </body>
 </html>
+
