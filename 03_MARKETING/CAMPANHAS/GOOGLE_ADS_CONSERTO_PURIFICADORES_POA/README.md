@@ -1,13 +1,13 @@
 # Google Ads — conserto de purificadores em Porto Alegre
 
-**Status:** Preparação registrada; conta e hospedagem aguardam configuração.  
+**Status:** Página publicada; campanha em rascunho; medição pendente.  
 **Atualizado em:** 14/11/2026
 
 ## Arquivos
 
 - [Configuração da campanha](CONFIGURACAO_CAMPANHA.md)
 - [Landing page (HTML)](LANDING_PAGE/index.html)
-- Imagem de hero gerada com GPT Image: arquivo local de trabalho `hero-purificador.png`; incluir no deploy ao publicar a página.
+- Imagem de hero gerada com GPT Image: `hero-purificador.png`, publicada na Hostinger junto ao HTML.
 
 ## Decisão de campanha
 
@@ -15,12 +15,12 @@ Teste de Pesquisa com R$ 50/dia, direcionado a pessoas que procuram assistência
 
 ## Estado atual — 14/11/2026
 
-A campanha não foi criada na conta Google Ads, a página não foi publicada em Hostinger e as tags de Ads/Analytics não foram instaladas. Durante a inspeção do navegador, a captura da janela do Google Ads falhou duas vezes; a automação foi interrompida. O HTML e o plano ficam registrados como preparação, sem afirmar que estejam no ar.
+Página publicada e verificada na Hostinger em 14/11/2026, com imagem e botões para o WhatsApp (51) 98145-9630. A conta Google Ads 738-373-8641 tem um rascunho de Pesquisa em configuração. O assistente exige concluir o faturamento e exibe aviso de autorização temporária de R$ 50. O formulário ficou sem envio e não exibiu opção de criação já pausada. Nenhuma campanha foi ativada por este trabalho.
 
 ## Verificações e pendências
 
 - Confirmar capacidade técnica, marcas, regiões, disponibilidade, avaliação e garantia.
-- Publicar `LANDING_PAGE/index.html` e a imagem junto no caminho `/conserto-purificadores`.
+- [Página publicada na Hostinger](https://winservicers.com/conserto-purificadores/).
 - Criar a ação de conversão na conta e substituir o marcador por um rótulo real.
 - Confirmar o ID do fluxo GA4 antes de instalar analytics.
-- Criar a campanha com o orçamento e as configurações do documento e mantê-la pausada.
+- Concluir o faturamento da conta pelo titular e verificar se a campanha pode ser criada pausada antes de enviar qualquer etapa de publicação.
