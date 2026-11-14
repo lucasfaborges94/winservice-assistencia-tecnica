@@ -60,3 +60,11 @@ Este registro **não autoriza** a IA a inventar preços, prometer gratuidade, co
 - A retomada deve respeitar a regra de identificar o atendimento correto pelo contexto, perguntando apenas em caso de ambiguidade.
 - Proposta técnica não implantada: persistir o estado da qualificação e campos coletados por atendimento; consultar dados atualizados de disponibilidade, condições comerciais e agenda antes de prometer ou confirmar qualquer serviço.
 - Pendente definir política de acompanhamento de clientes sem resposta, prazos e encerramento de solicitações abandonadas.
+
+## Decisão da direção — recusa com período de retenção (14/11/2026)
+- Quando o cliente recusar expressamente o serviço, registrar o atendimento como **recusado**, preservando o histórico e permitindo retomada caso ele procure novamente.
+- A direção deseja manter o atendimento nessa condição por um período de referência de **15 a 30 dias**; o prazo exato ainda precisa ser escolhido.
+- A recusa deve **interromper imediatamente os follow-ups comerciais** dessa solicitação; manter registro não autoriza novas mensagens de insistência.
+- Se o cliente voltar espontaneamente durante o período, a IA deve identificar o atendimento anterior e retomar o contexto, verificando novamente condições e disponibilidade atualizadas.
+- Proposta técnica: distinguir status comercial recusado, prazo de retenção operacional e política de arquivamento. Após o prazo, arquivar/encerrar operacionalmente sem apagar o histórico; uma nova manifestação do cliente pode reabrir ou criar novo atendimento conforme regra futura.
+- O motor de follow-up será separado da máquina de estados, com políticas por etapa; intervalos e quantidade de tentativas ainda não definidos.
