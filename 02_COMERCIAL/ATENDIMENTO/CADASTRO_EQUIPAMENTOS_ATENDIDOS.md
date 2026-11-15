@@ -12,11 +12,14 @@
 - Lava e seca já é uma categoria confirmada no processo comercial.
 - A elegibilidade efetiva também depende de marca, solicitação e região, conforme PROCESSO_ATENDIMENTO_INICIAL.md.
 
-## Cadastro inicial — conforme informações da direção
-| Categoria | Disponibilidade declarada | Observação |
-| --- | --- | --- |
-| Lava e seca | Atendida | Regras comerciais específicas por marca |
-| Purificador de água | Em ativação | Atendimento vinculado à disponibilidade do técnico parceiro; confirmar operação antes de prometer visita |
+## Lista fechada de equipamentos — decisão da direção de 15/11/2026
+O [catálogo de equipamentos](CATALOGO_EQUIPAMENTOS.json) é a fonte da lista de equipamentos atendidos e da lista de exclusões. A lista `atendidos` é fechada. Quando o equipamento estiver identificado com clareza e não constar dessa lista, a Winservice não atende o pedido de conserto.
+
+A lista `exclusoes` é aplicada primeiro. Ela retira subtipos específicos de uma categoria atendida. Por exemplo, se a categoria secadora de roupas for atendida e houver uma exclusão publicada para secadora de varal, a exclusão prevalece no caso específico. A lista negativa começa vazia, sem converter esse exemplo em uma exclusão aprovada.
+
+Se faltar identificar o equipamento ou houver ambiguidade, peça esclarecimento. Se a versão publicada do catálogo estiver indisponível, encaminhe para validação humana. Faça a consulta pela cópia versionada da regra publicada. Uma mudança de disponibilidade nunca inclui um equipamento fora da lista e não habilita agendamento por si só.
+
+O purificador de água pertence ao escopo atendido e mantém a disponibilidade `em_ativacao` até confirmação da operação com o parceiro. A lista fechada não altera cobertura regional, preços ou disponibilidade de agenda.
 
 ## Proposta de implementação (não aprovada nem implantada)
 Criar cadastro no banco operacional (por exemplo Supabase), com campos: id, nome da categoria, status (ativo, suspenso, inativo), modalidade de execução (equipe própria/parceiro), referência de responsável, regiões cobertas, observações, data de atualização e motivo de suspensão. O vínculo com técnicos e a disponibilidade efetiva devem ser modelados separadamente, permitindo mais de um profissional por categoria.
@@ -49,6 +52,6 @@ As regras de cobrança/isenção permanecem em matriz separada por categoria, ma
 
 ## Pendências
 - Confirmar quando a operação de purificadores estará efetivamente disponível para agendamento.
-- Definir demais categorias e sua disponibilidade.
+- Manter disponibilidade, cobertura regional e condições comerciais de cada categoria nas fontes aprovadas.
 - Aprovar estados e regras de ativação/desativação e o responsável pela manutenção do cadastro.
 - Definir integração com o banco, ferramentas e workflow do n8n, além de permissões e interface da central de notificações.

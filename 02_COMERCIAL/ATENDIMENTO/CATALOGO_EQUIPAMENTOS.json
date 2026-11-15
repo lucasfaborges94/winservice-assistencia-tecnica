@@ -1,0 +1,104 @@
+{
+  "schema_version": "1",
+  "modo": "lista_fechada",
+  "precedencia": [
+    "exclusoes",
+    "atendidos"
+  ],
+  "atendidos": [
+    {
+      "id": "lava_e_seca",
+      "nome": "Lava e seca",
+      "aliases": [
+        "lava e seca",
+        "lavadora e secadora",
+        "lavadora e secadora de roupas",
+        "lavadora secadora"
+      ],
+      "disponibilidade": "ativa"
+    },
+    {
+      "id": "lavadora_de_roupas",
+      "nome": "Lavadora de roupas",
+      "aliases": [
+        "lavadora de roupas",
+        "máquina de lavar roupas",
+        "máquina de lavar",
+        "lavadora"
+      ],
+      "disponibilidade": "ativa"
+    },
+    {
+      "id": "secadora_de_roupas",
+      "nome": "Secadora de roupas",
+      "aliases": [
+        "secadora de roupas",
+        "máquina de secar roupas",
+        "máquina de secar",
+        "secadora"
+      ],
+      "disponibilidade": "ativa"
+    },
+    {
+      "id": "lava_loucas",
+      "nome": "Lava-louças",
+      "aliases": [
+        "lava-louças",
+        "lava louças",
+        "lavadora de louças",
+        "máquina de lavar louça"
+      ],
+      "disponibilidade": "ativa"
+    },
+    {
+      "id": "micro_ondas",
+      "nome": "Micro-ondas",
+      "aliases": [
+        "micro-ondas",
+        "microondas",
+        "forno de micro-ondas",
+        "micro ondas"
+      ],
+      "disponibilidade": "ativa"
+    },
+    {
+      "id": "forno_eletrico",
+      "nome": "Forno elétrico",
+      "aliases": [
+        "forno elétrico",
+        "forninho elétrico"
+      ],
+      "disponibilidade": "ativa"
+    },
+    {
+      "id": "geladeira",
+      "nome": "Geladeira",
+      "aliases": [
+        "geladeira",
+        "refrigerador"
+      ],
+      "disponibilidade": "ativa"
+    },
+    {
+      "id": "freezer",
+      "nome": "Freezer",
+      "aliases": [
+        "freezer",
+        "congelador independente",
+        "freezer horizontal",
+        "freezer vertical"
+      ],
+      "disponibilidade": "ativa"
+    },
+    {
+      "id": "purificador_de_agua",
+      "nome": "Purificador de água",
+      "aliases": [
+        "purificador de água",
+        "purificador"
+      ],
+      "disponibilidade": "em_ativacao"
+    }
+  ],
+  "exclusoes": []
+}

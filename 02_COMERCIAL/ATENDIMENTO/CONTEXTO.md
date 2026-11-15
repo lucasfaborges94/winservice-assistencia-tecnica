@@ -7,5 +7,7 @@
 ## Situação
 A direção iniciou o desenho de automação para novos clientes, começando por qualificação, condições da visita de orçamento e agendamento. O processo atual e os dados mínimos foram descritos verbalmente e registrados em `PROCESSO_ATENDIMENTO_INICIAL.md`.
 
+A lista fechada de equipamentos e as exclusões específicas estão no [catálogo versionado](CATALOGO_EQUIPAMENTOS.json). A disponibilidade por categoria segue o [cadastro de equipamentos](CADASTRO_EQUIPAMENTOS_ATENDIDOS.md).
+
 ## Próximos passos
 Detalhar a matriz de atendimento e cobrança por equipamento, marca e região, e posteriormente especificar a máquina de estados e as skills. Não há implantação confirmada por este registro.
