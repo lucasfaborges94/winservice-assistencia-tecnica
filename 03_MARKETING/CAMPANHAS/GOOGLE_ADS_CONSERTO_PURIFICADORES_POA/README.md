@@ -6,3 +6,4 @@ A campanha de Pesquisa está configurada com R$ 50 por dia e foi pausada no Goog
 - [HTML publicado](LANDING_PAGE/index.html)
 - [Página pública](https://winservicers.com/conserto-purificadores/)
 - [Guia de identidade visual](../../IDENTIDADE_VISUAL/index.html)
+- [Cronograma de acompanhamento e otimização](CRONOGRAMA_OTIMIZACAO.md)
