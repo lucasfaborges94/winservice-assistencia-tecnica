@@ -13,16 +13,16 @@
 - A elegibilidade efetiva também depende de marca, solicitação e região, conforme PROCESSO_ATENDIMENTO_INICIAL.md.
 
 ## Lista fechada de equipamentos — decisão da direção de 15/11/2026
-O [catálogo de equipamentos](CATALOGO_EQUIPAMENTOS.json) é a fonte da lista de equipamentos atendidos e da lista de exclusões. A lista `atendidos` é fechada. Quando o equipamento estiver identificado com clareza e não constar dessa lista, a Winservice não atende o pedido de conserto.
+O [catálogo de equipamentos](CATALOGO_EQUIPAMENTOS.json) é a carga inicial exclusiva da Winservice para a lista de equipamentos atendidos e para a lista de exclusões. No MVP, as versões operacionais serão publicadas no Supabase por empresa. A lista `atendidos` é fechada. Quando o equipamento estiver identificado com clareza e não constar dessa lista, a Winservice não atende o pedido de conserto.
 
 A lista `exclusoes` é aplicada primeiro. Ela retira subtipos específicos de uma categoria atendida. Por exemplo, se a categoria secadora de roupas for atendida e houver uma exclusão publicada para secadora de varal, a exclusão prevalece no caso específico. A lista negativa começa vazia, sem converter esse exemplo em uma exclusão aprovada.
 
-Se faltar identificar o equipamento ou houver ambiguidade, peça esclarecimento. Se a versão publicada do catálogo estiver indisponível, encaminhe para validação humana. Faça a consulta pela cópia versionada da regra publicada. Uma mudança de disponibilidade nunca inclui um equipamento fora da lista e não habilita agendamento por si só.
+Se faltar identificar o equipamento ou houver ambiguidade, peça esclarecimento. Se a versão publicada do catálogo estiver indisponível, encaminhe para validação humana. Consulte pela API a revisão vigente da empresa no Supabase. As Data Tables de catálogo do n8n ficam restritas aos testes do protótipo. Uma mudança de disponibilidade nunca inclui um equipamento fora da lista e não habilita agendamento por si só.
 
 O purificador de água pertence ao escopo atendido e mantém a disponibilidade `em_ativacao` até confirmação da operação com o parceiro. A lista fechada não altera cobertura regional, preços ou disponibilidade de agenda.
 
 ## Proposta de implementação (não aprovada nem implantada)
-Criar cadastro no banco operacional (por exemplo Supabase), com campos: id, nome da categoria, status (ativo, suspenso, inativo), modalidade de execução (equipe própria/parceiro), referência de responsável, regiões cobertas, observações, data de atualização e motivo de suspensão. O vínculo com técnicos e a disponibilidade efetiva devem ser modelados separadamente, permitindo mais de um profissional por categoria.
+Modelar no Supabase um cadastro vinculado à empresa, com campos: id, nome da categoria, status (ativo, suspenso, inativo), modalidade de execução (equipe própria/parceiro), referência de responsável, regiões cobertas, observações, data de atualização e motivo de suspensão. O vínculo com técnicos e a disponibilidade efetiva devem ser modelados separadamente, permitindo mais de um profissional por categoria.
 
 O agente consulta esse cadastro por tool a cada nova qualificação, antes de prometer atendimento. Categoria suspensa/inativa não deve ser oferecida para novos agendamentos. Atendimentos já abertos devem manter seu histórico e ser tratados conforme regras operacionais a definir. Não excluir registros históricos para representar interrupção da parceria.
 
