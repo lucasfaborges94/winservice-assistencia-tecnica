@@ -87,3 +87,12 @@ Todas as execuções acima retornaram `status=success` e foram verificadas pela 
 - Workflow publicado ativo na versão `23eb2ce9-9de3-46e5-adbd-83805ee1cd3c`; gatilho a cada cinco minutos.
 - **Atenção:** habilitação de caminho não é prova de transferência ponta a ponta. A atribuição real poderá ocorrer somente se a conversa de teste atingir estado elegível. Não ampliar whitelist sem validar resultado e corrigir falhas.
 - **Rollback:** despublicar workflow ou remover conexão `Preparar transferência em simulação` → `Transferir automaticamente no Chatwoot (desativado)` e republicar.
+
+## Integração operacional por webhook — 16/11/2026 UTC
+- Workflow `xKLAexEfJxATiHDC` publicado versão `4c3286ea-e35b-4145-9b1d-f0644a3c4a6c`: webhook `POST /webhook/winservice/atendimento-v2`, configuração dinâmica por evento Chatwoot, consulta à API do Chatwoot, validação de conversa/contato/telefone/inbox, IA, deduplicação SQL, envio de mensagem pública Chatwoot após gravação, consulta do encaminhamento e atribuição dinâmica para equipe 1.
+- Restrição de **conversa fixa removida para eventos webhook**; inbox 17 e conta 1 permanecem como escopo. Eventos que não são `message_created` incoming ou sem campos válidos são descartados. Polling de conversa fixa removido. O gatilho manual ainda aponta à conversa de diagnóstico 1152.
+- Workflow de ingestão `qUZG9HfLePlbHxyf` publicado versão `6a664146-d5a5-4bc2-a307-9d2134689e57`; ramificação paralela encaminha payload original Chatwoot ao webhook de atendimento, com falha isolada para não impedir ingestão existente.
+- Teste de rejeição de evento outgoing, execução real webhook `9948623`: **PASSOU**, filtrado no nó de configuração, sem envio.
+- Consulta às execuções históricas da ingestão mostrou falhas anteriores de embedding OpenAI devido a `N8N_BLOCK_ENV_ACCESS_IN_NODE` na expressão `$env.OPENAI_API_KEY`; esse problema preexistente não foi corrigido e a ramificação nova é independente.
+- **Não verificado ainda:** mensagem incoming real no inbox 17 após publicação, inferência real, INSERT/UPSERT em Supabase, resposta efetivamente entregue ao WhatsApp, atribuição e auditoria reais. Não declarar homologação ponta a ponta concluída.
+- Rollback: despublicar o atendimento V2 e remover a ramificação `Webhook Chatwoot` → `Encaminhar evento ao atendimento V2` na ingestão; republicar ingestão.
