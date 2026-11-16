@@ -61,3 +61,11 @@ Todas as execuções acima retornaram `status=success` e foram verificadas pela 
 - Em ambos os testes, a codificação base64 do payload foi produzida, sem escrita real; o modelo foi simulado (saída fixa) e as integrações foram pinadas.
 - **Atenção:** o retorno `status=success` dos testes não valida o SQL real, nem a qualidade do modelo OpenAI com entrada livre, nem a atribuição no Chatwoot.
 - **Critério de conclusão ainda não atendido:** persistência real positiva, idempotência concorrente, falhas e restauração isolada. Não ativar produção.
+
+## Teste transacional real de deduplicação — Supabase (16/11/2026 UTC)
+- Inspecionadas quatro tabelas do schema `atendimento_piloto`: `qualificacoes`, `mensagens_processadas`, `encaminhamentos_humanos`, `auditoria_encaminhamentos`; todas com RLS habilitado.
+- Verificados índices únicos por `tenant_key, canal, conversa_externa_id` nas qualificações/encaminhamentos e por `tenant_key, canal, conversa_externa_id, mensagem_externa_id` em mensagens processadas.
+- **PASSOU:** transação SQL de homologação com duas inserções idênticas e `ON CONFLICT DO NOTHING` retornou `total_deduplicado=1`.
+- **PASSOU:** `ROLLBACK` executado na mesma transação; consulta posterior retornou `residuos=0`. Nenhum dado de teste foi mantido.
+- **Limite:** teste sequencial não equivale a teste de concorrência entre transações nem exercita o SQL completo de persistência do n8n. Não valida autorização efetiva de RLS por papel.
+- O workflow segue inativo e sem envio externo.
