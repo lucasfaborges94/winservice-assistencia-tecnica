@@ -1,6 +1,6 @@
 # MODELO — Instruções para agentes de IA em recuperação e reimplementação
 
-**Status:** MODELO PROPOSTO, não vigente até aprovação da ADR-001
+**Status:** MODELO CORPORATIVO VIGENTE — conforme ADR-001 aprovada em 16/11/2026
 **Aplicação:** Adaptar por sistema, anexar ao DRP e complementar `AGENTES.md` da hierarquia.
 **Objetivo:** Permitir que uma IA, sem memória prévia, reconstrua o sistema com segurança, supervisão e evidências.
 
