@@ -7,3 +7,6 @@ Reúne registros de trabalhos realizados com apoio de IAs. Os logs estão em [`L
 
 ## Histórico
 - 14/11/2026: criada a organização de logs por pasta.
+
+## Atendimento automatizado — recuperação
+- Runbook de recuperação e homologação: [`RECUPERACAO_ATENDIMENTO_AUTOMATIZADO.md`](RECUPERACAO_ATENDIMENTO_AUTOMATIZADO.md). Registra estado confirmado, testes e pendências de reconstrução; piloto n8n permanece inativo e restrito.
