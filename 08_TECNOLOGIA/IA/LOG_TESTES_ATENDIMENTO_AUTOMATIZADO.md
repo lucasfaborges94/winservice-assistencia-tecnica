@@ -47,3 +47,10 @@ Todas as execuções acima retornaram `status=success` e foram verificadas pela 
 - **Execução manual 9948498: PASSOU.** Consultou Chatwoot e banco na ramificação de leitura/deduplicação, sem alcançar a persistência; terminou com `status=success`. Não comprova processamento positivo nem escrita no Supabase.
 - O workflow segue **inativo**, sem transferências automáticas conectadas. Não foram ativados gatilhos nem envio ao WhatsApp.
 - **Risco residual:** o número autorizado ainda está fixo no nó de whitelist e a configuração está codificada no workflow. Falta parametrização integral, isolamento e testes de escrita, falhas e concorrência.
+
+## Continuação — centralização da whitelist e regressão real
+- No n8n, o nó `Validar whitelist e montar histórico` passou a ler `contactId`, `conversationId`, `inboxId`, `approvedRecipient` e `mode` da configuração validada, eliminando duplicação de valores no código do validador.
+- O validador passou a exigir explicitamente `mode=PREVIEW_ONLY`, `outboundEnabled=false` e `assignmentEnabled=false` antes de produzir itens. A configuração segue restrita ao piloto, sem permitir novos contatos.
+- **Execução manual real 9948511: PASSOU** (`status=success`), incluindo nós de whitelist, consulta de mensagem processada e deduplicação. Não alcançou etapa de gravação.
+- Sem ativação do workflow, sem mensagens externas e sem transferência automática.
+- **Pendência:** ainda faltam teste positivo de qualificação com IA, escrita SQL, concorrência, tratamento de falhas, DRP e ativação controlada.
