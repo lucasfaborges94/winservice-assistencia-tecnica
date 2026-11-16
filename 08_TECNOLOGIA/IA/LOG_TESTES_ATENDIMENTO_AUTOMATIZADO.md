@@ -78,3 +78,12 @@ Todas as execuções acima retornaram `status=success` e foram verificadas pela 
 - Execuções de sucesso e erro configuradas para serem salvas, timeout de 180 s.
 - **Estado de liberação:** produção técnica em modo sombra; **não** produção de atendimento automatizado para clientes. Necessário validar as primeiras execuções agendadas e implementar integração segura de resposta/transferência antes de expandir o escopo.
 - Rollback imediato: despublicar o workflow `xKLAexEfJxATiHDC`; nenhuma alteração no fluxo de ingestão Chatwoot existente.
+
+## Piloto ponta a ponta sem envio de mensagens (16/11/2026 UTC)
+- A pedido do responsável, habilitado o caminho de atribuição de equipe no Chatwoot, mantendo **nenhum nó de envio de mensagem ao cliente conectado**; `outboundEnabled=false`, resposta apenas em `Prévia sem envio WhatsApp`.
+- Configuração restrita alterada para `assignmentEnabled=true`; whitelist continua exigindo tenant, inbox, conversa, contato e número do piloto e modo `PREVIEW_ONLY`.
+- Nó `Preparar transferência em simulação` agora valida autorização e encaminha para `Transferir automaticamente no Chatwoot (desativado)`, que foi habilitado; este segue para confirmação e registro de auditoria no Supabase, agora habilitado.
+- **Execução manual 9948556: PASSOU** na ramificação de leitura e deduplicação; não houve mensagem nova elegível e, portanto, **não exercitou** IA, persistência, atribuição nem auditoria.
+- Workflow publicado ativo na versão `23eb2ce9-9de3-46e5-adbd-83805ee1cd3c`; gatilho a cada cinco minutos.
+- **Atenção:** habilitação de caminho não é prova de transferência ponta a ponta. A atribuição real poderá ocorrer somente se a conversa de teste atingir estado elegível. Não ampliar whitelist sem validar resultado e corrigir falhas.
+- **Rollback:** despublicar workflow ou remover conexão `Preparar transferência em simulação` → `Transferir automaticamente no Chatwoot (desativado)` e republicar.
