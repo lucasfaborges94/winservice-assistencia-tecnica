@@ -69,3 +69,12 @@ Todas as execuções acima retornaram `status=success` e foram verificadas pela 
 - **PASSOU:** `ROLLBACK` executado na mesma transação; consulta posterior retornou `residuos=0`. Nenhum dado de teste foi mantido.
 - **Limite:** teste sequencial não equivale a teste de concorrência entre transações nem exercita o SQL completo de persistência do n8n. Não valida autorização efetiva de RLS por papel.
 - O workflow segue inativo e sem envio externo.
+
+## Publicação controlada — modo sombra (16/11/2026 UTC)
+- Autorização do responsável: iniciar produção em modo teste, lapidando e reforçando progressivamente.
+- Workflow n8n `xKLAexEfJxATiHDC` **publicado/ativo**, versão `d054637e-d6c9-4a59-8876-addca3ad3ce8`.
+- Novo `scheduleTrigger` a cada 5 minutos, conectado exclusivamente ao nó de configuração restrita. O disparo manual permanece disponível para diagnóstico.
+- Restrição mantida: somente tenant, conversa, inbox e contato explicitamente permitidos; `PREVIEW_ONLY`, `outboundEnabled=false`, `assignmentEnabled=false`. Não envia mensagens nem transfere atendimentos.
+- Execuções de sucesso e erro configuradas para serem salvas, timeout de 180 s.
+- **Estado de liberação:** produção técnica em modo sombra; **não** produção de atendimento automatizado para clientes. Necessário validar as primeiras execuções agendadas e implementar integração segura de resposta/transferência antes de expandir o escopo.
+- Rollback imediato: despublicar o workflow `xKLAexEfJxATiHDC`; nenhuma alteração no fluxo de ingestão Chatwoot existente.
