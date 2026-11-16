@@ -96,3 +96,10 @@ Todas as execuções acima retornaram `status=success` e foram verificadas pela 
 - Consulta às execuções históricas da ingestão mostrou falhas anteriores de embedding OpenAI devido a `N8N_BLOCK_ENV_ACCESS_IN_NODE` na expressão `$env.OPENAI_API_KEY`; esse problema preexistente não foi corrigido e a ramificação nova é independente.
 - **Não verificado ainda:** mensagem incoming real no inbox 17 após publicação, inferência real, INSERT/UPSERT em Supabase, resposta efetivamente entregue ao WhatsApp, atribuição e auditoria reais. Não declarar homologação ponta a ponta concluída.
 - Rollback: despublicar o atendimento V2 e remover a ramificação `Webhook Chatwoot` → `Encaminhar evento ao atendimento V2` na ingestão; republicar ingestão.
+
+## Correção da falha real 9948714 — 16/11/2026 UTC
+- Execução webhook `9948714` processou mensagem real da conversa 1153 pelo Chatwoot, passou pela IA e falhou em `Persistir estado e deduplicar` com `chk_piloto_contato_autorizado`.
+- Causa-raiz: restrições SQL de homologação limitavam conversas a 1149/1152 e contato 1089; também havia duas restrições análogas na tabela de encaminhamentos.
+- Migração aplicada com sucesso `atendimento_v2_permitir_conversas_dinamicas_inbox_validado`: remove três restrições fixas do piloto e adiciona `chk_v2_identidade_valida` e `chk_v2_encaminhamento_valido` para exigir IDs positivos e telefone preenchido. Validação de inbox 17, conta, contato e mensagem continua no workflow.
+- Não houve resposta enviada nesta execução: falha SQL ocorreu antes do nó de saída.
+- **Pendente:** nova mensagem incoming para comprovar persistência, envio de resposta e transferência. A execução antiga não foi reproduzida automaticamente.
