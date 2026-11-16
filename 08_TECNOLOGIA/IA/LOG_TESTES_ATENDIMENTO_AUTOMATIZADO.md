@@ -110,3 +110,9 @@ Todas as execuções acima retornaram `status=success` e foram verificadas pela 
 - Saudação por período do dia somente quando houver horário local confiável; sem horário disponível, usar `Olá!`.
 - Alteração apenas de prompt, sem mudar regras de extração ou banco. A nova versão precisa ser avaliada nas próximas mensagens reais.
 - Diretrizes devem ser extraídas posteriormente para documentação reutilizável/Skill de atendimento, sem criar Skill separada só para tom.
+
+## Correção de intenção conversacional — 16/11/2026 UTC
+- Execução `9948896`, conversa 1153, mensagem 39403: cliente perguntou `Vocês concertão?`; agente respondeu com repetição da pergunta sobre marca e ignorou dúvida direta.
+- Causa: prompt priorizava campo obrigatório ausente e não instruía responder à última pergunta do cliente antes de qualificar.
+- Atualizado e publicado prompt no workflow `xKLAexEfJxATiHDC`, versão `e82a564d-6b7e-47c5-a5f5-84f789c28e5c`, para priorizar perguntas, interpretar erros de digitação, lidar com objeções e evitar afirmações não verificadas sobre cobertura, preço ou disponibilidade.
+- A alteração não reprocessa a mensagem anterior; validar em nova mensagem real.
