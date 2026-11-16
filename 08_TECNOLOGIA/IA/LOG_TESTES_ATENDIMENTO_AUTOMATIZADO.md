@@ -54,3 +54,10 @@ Todas as execuções acima retornaram `status=success` e foram verificadas pela 
 - **Execução manual real 9948511: PASSOU** (`status=success`), incluindo nós de whitelist, consulta de mensagem processada e deduplicação. Não alcançou etapa de gravação.
 - Sem ativação do workflow, sem mensagens externas e sem transferência automática.
 - **Pendência:** ainda faltam teste positivo de qualificação com IA, escrita SQL, concorrência, tratamento de falhas, DRP e ativação controlada.
+
+## Homologação funcional positiva — testes simulados (16/11/2026 UTC)
+- **Execução 9948516 — PASSOU:** quatro campos presentes (equipamento, marca, defeito, bairro); nó `Estruturar qualificação e sinalizar humano` produziu `status=AGUARDANDO_EQUIPE`, `handoffRequested=true`, zero campos pendentes. A resposta ficou apenas em prévia (`BLOCKED_PREVIEW_ONLY`).
+- **Execução 9948517 — PASSOU:** bairro ausente; nó produziu `status=QUALIFICACAO`, `handoffRequested=false`, `camposPendentes=['bairro']` e pergunta curta sobre bairro. A resposta ficou apenas em prévia.
+- Em ambos os testes, a codificação base64 do payload foi produzida, sem escrita real; o modelo foi simulado (saída fixa) e as integrações foram pinadas.
+- **Atenção:** o retorno `status=success` dos testes não valida o SQL real, nem a qualidade do modelo OpenAI com entrada livre, nem a atribuição no Chatwoot.
+- **Critério de conclusão ainda não atendido:** persistência real positiva, idempotência concorrente, falhas e restauração isolada. Não ativar produção.
