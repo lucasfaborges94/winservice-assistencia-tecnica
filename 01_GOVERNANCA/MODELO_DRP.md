@@ -1,6 +1,6 @@
 # MODELO — Plano de recuperação e reimplementação (DRP)
 
-**Status:** MODELO PROPOSTO — uso normativo condicionado à aprovação da ADR-001
+**Status:** MODELO CORPORATIVO VIGENTE — conforme ADR-001 aprovada em 16/11/2026
 **Sistema:** [nome] | **Proprietário:** [função] | **Substituto:** [função]
 **Versão:** [versão] | **Última verificação:** [data] | **Status do DRP:** DOCUMENTADO_NAO_TESTADO
 **Criticidade:** [avaliar] | **RPO:** [definir] | **RTO:** [definir]
