@@ -135,3 +135,10 @@ Todas as execuções acima retornaram `status=success` e foram verificadas pela 
 - Workflow `xKLAexEfJxATiHDC`, versão publicada `e6bbb861-2320-49c6-8029-5038a9885100`: novo nó PostgreSQL `Consultar catálogo operacional por empresa` entre `Bloquear mensagem duplicada` e `Qualificar e preparar resposta`; fornece JSON e revisão ao agente; prompt não fixa mais a lista de equipamentos.
 - Fallback sem catálogo: IA não deve afirmar cobertura e deve pedir validação humana.
 - **Pendente:** teste real ponta a ponta da nova versão; controle de acesso administrativo, publicação/versionamento de revisões, gestão de marcas, exclusões, regiões e disponibilidade técnica continuam como etapas separadas. A tabela não é uma interface administrativa nem sincroniza automaticamente alterações do arquivo GitHub.
+
+## Teste real dos modificadores de secadora — 16/11/2026 UTC
+- Conversa 1153; execuções `9949161`, `9949193`, `9949223`, `9949254` com sucesso e nó de consulta de catálogo executado (revisão 3).
+- `Consertam ou nao?` -> IA informou atendimento de secadora de tambor e exclusão de varal.
+- `Ela é de chão` -> pediu esclarecimento; `Que abre na frente` -> repetiu esclarecimento sobre tambor; `Sim, o cubo dela gira` -> confirmou secadora de tambor e pediu bairro.
+- Banco: secadora de tambor, Brastemp, defeito cesto não gira, bairro ausente, status QUALIFICACAO; transferência não foi acionada.
+- Melhoria aplicada e publicada versão `a4a279f3-6b61-4698-a1f9-3734b8f66bb9`: reconhecer descrições físicas combinadas de secadora frontal/de chão, evitar confirmação repetitiva; ainda requer novo teste real para validar a melhoria.
