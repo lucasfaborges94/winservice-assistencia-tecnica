@@ -7,3 +7,6 @@ Esta é a área de Tecnologia da Winservice. Os trabalhos de inteligência artif
 
 ## Histórico
 - 14/11/2026: estrutura da área explicitada e logs reunidos em `IA/Logs/`.
+
+## Continuidade operacional
+- A área de IA mantém um [runbook de recuperação do atendimento automatizado](IA/RECUPERACAO_ATENDIMENTO_AUTOMATIZADO.md), ainda incompleto quanto a exportações e backups restauráveis.
