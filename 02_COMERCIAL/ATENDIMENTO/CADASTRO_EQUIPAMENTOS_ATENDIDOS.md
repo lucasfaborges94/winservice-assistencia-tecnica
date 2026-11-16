@@ -55,3 +55,11 @@ As regras de cobrança/isenção permanecem em matriz separada por categoria, ma
 - Manter disponibilidade, cobertura regional e condições comerciais de cada categoria nas fontes aprovadas.
 - Aprovar estados e regras de ativação/desativação e o responsável pela manutenção do cadastro.
 - Definir integração com o banco, ferramentas e workflow do n8n, além de permissões e interface da central de notificações.
+
+## Modificadores por subtipo, categoria e marca — implantação inicial 16/11/2026
+- Catálogo operacional tenant `winservice-homologacao` no Supabase: `atendimento_piloto.catalogos_equipamentos`, JSON schema_version 2, com `subtipos[]` e `qualificadores_comerciais[]`.
+- Secadora de tambor: subtipo `atendido`. Secadora de varal: `nao_atendido`, prevalece sobre a categoria secadora ativa. Se subtipo não for informado, o agente deve perguntar antes de confirmar cobertura.
+- Lava e seca Samsung e LG: modificador `especializada`, exclusivamente para essas combinações de categoria/marca; não implica assistência autorizada.
+- Modificadores são extensíveis; `nao_atendido` bloqueia oferta, `especializada` permite informar especialização e `autorizada` fica reservado para credenciamento oficial comprovado e registrado. Não há credenciamento oficial cadastrado nesta implantação.
+- Prompt do n8n `xKLAexEfJxATiHDC` consulta o catálogo por tenant e interpreta esses atributos; versão publicada `54095862-0edf-4e2a-91fc-622e459e2ad5`.
+- Pendente: interface administrativa, validação formal de novos modificadores, regras de prioridade com testes automatizados, gestão de marcas/regiões e teste ponta a ponta com mensagens reais. Não alterar regras de outros tenants.
