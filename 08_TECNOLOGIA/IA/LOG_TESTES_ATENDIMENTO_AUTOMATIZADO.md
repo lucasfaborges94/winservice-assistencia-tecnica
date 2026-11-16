@@ -103,3 +103,10 @@ Todas as execuções acima retornaram `status=success` e foram verificadas pela 
 - Migração aplicada com sucesso `atendimento_v2_permitir_conversas_dinamicas_inbox_validado`: remove três restrições fixas do piloto e adiciona `chk_v2_identidade_valida` e `chk_v2_encaminhamento_valido` para exigir IDs positivos e telefone preenchido. Validação de inbox 17, conta, contato e mensagem continua no workflow.
 - Não houve resposta enviada nesta execução: falha SQL ocorreu antes do nó de saída.
 - **Pendente:** nova mensagem incoming para comprovar persistência, envio de resposta e transferência. A execução antiga não foi reproduzida automaticamente.
+
+## Ajuste de comunicação — 16/11/2026 UTC
+- Workflow `xKLAexEfJxATiHDC` publicado versão `bbddd1ea-300b-4b3c-bef8-257706d1216d`.
+- Prompt do agente atualizado para atendimento cordial, saudação inicial, acolhimento do problema, uma pergunta por vez, sem repetição de saudações e sem promessas comerciais.
+- Saudação por período do dia somente quando houver horário local confiável; sem horário disponível, usar `Olá!`.
+- Alteração apenas de prompt, sem mudar regras de extração ou banco. A nova versão precisa ser avaliada nas próximas mensagens reais.
+- Diretrizes devem ser extraídas posteriormente para documentação reutilizável/Skill de atendimento, sem criar Skill separada só para tom.
