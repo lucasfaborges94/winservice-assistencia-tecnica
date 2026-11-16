@@ -27,3 +27,6 @@ Este arquivo é um resumo transversal. Alterações locais só devem chegar aqui
 ## Histórico
 - 1.0 — 14/11/2026: estrutura de contexto aprovada, com lacunas factuais explicitadas.
 - 1.1 — 14/11/2026: esclarecido caráter dinâmico e consulta sob demanda.
+
+## Proposta de continuidade e recuperação corporativa
+- Criada a proposta [`ADR-001 — Continuidade, recuperação de desastre e reimplementação integral`](01_GOVERNANCA/ADR_001_CONTINUIDADE_RECUPERACAO_E_REIMPLEMENTACAO.md), acompanhada de modelos de DRP e de instruções para agentes de IA. **Aprovação formal pendente**; ainda não é norma vigente.
