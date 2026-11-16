@@ -127,3 +127,11 @@ Todas as execuções acima retornaram `status=success` e foram verificadas pela 
 - Fonte: `02_COMERCIAL/ATENDIMENTO/CATALOGO_EQUIPAMENTOS.json`. Secadora de roupas é categoria ativa.
 - Publicada versão `4aaa2d22-212f-4858-9716-642552713441` do workflow `xKLAexEfJxATiHDC`, instruindo a IA a confirmar conserto de secadoras Brastemp, sem prometer agenda, peças, preço ou cobertura regional.
 - Catálogo foi incluído como fotografia no prompt. **Ainda não existe consulta dinâmica à revisão operacional do Supabase por empresa**. Validar resposta com nova mensagem real.
+
+## Implantação do catálogo operacional por tenant — 16/11/2026 UTC
+- Previsto em `02_COMERCIAL/ATENDIMENTO/CADASTRO_EQUIPAMENTOS_ATENDIDOS.md` (anteriormente não implantado).
+- Migração Supabase `catalogo_operacional_atendimento_por_tenant`: tabela `atendimento_piloto.catalogos_equipamentos(tenant_key PK,catalogo jsonb,revisao,atualizado_em)`; carga inicial idempotente de `CATALOGO_EQUIPAMENTOS.json` somente no tenant `winservice-homologacao`.
+- Validação SQL: revisão 1, 9 categorias, `secadora_de_roupas` ativa.
+- Workflow `xKLAexEfJxATiHDC`, versão publicada `e6bbb861-2320-49c6-8029-5038a9885100`: novo nó PostgreSQL `Consultar catálogo operacional por empresa` entre `Bloquear mensagem duplicada` e `Qualificar e preparar resposta`; fornece JSON e revisão ao agente; prompt não fixa mais a lista de equipamentos.
+- Fallback sem catálogo: IA não deve afirmar cobertura e deve pedir validação humana.
+- **Pendente:** teste real ponta a ponta da nova versão; controle de acesso administrativo, publicação/versionamento de revisões, gestão de marcas, exclusões, regiões e disponibilidade técnica continuam como etapas separadas. A tabela não é uma interface administrativa nem sincroniza automaticamente alterações do arquivo GitHub.
