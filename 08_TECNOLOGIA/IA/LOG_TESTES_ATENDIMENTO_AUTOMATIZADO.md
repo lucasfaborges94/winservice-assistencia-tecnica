@@ -39,3 +39,11 @@ Todas as execuções acima retornaram `status=success` e foram verificadas pela 
 
 ## Conclusão
 **APROVADO PARCIALMENTE PARA CONTINUAR HOMOLOGAÇÃO MANUAL RESTRITA. NÃO APROVADO PARA PRODUÇÃO.**
+
+## Continuação autorizada — integração real restrita e correção (16/11/2026 UTC)
+- Foram parametrizadas as queries dos nós `Consultar mensagem processada`, `Persistir estado e deduplicar` e `Consultar estado real do encaminhamento` para consumir tenant, conversa e contato da configuração restritiva do piloto. Os demais nós ainda precisam de revisão.
+- **Execução manual 9948497: FALHOU.** O nó `Consultar mensagem processada` retornou `ExpressionError: invalid syntax` após a primeira tentativa de parametrização. Nenhuma etapa de persistência foi executada nessa tentativa.
+- Corrigida a expressão: o SQL passou a usar interpolações nativas do n8n nos campos, mantendo os valores provenientes de configuração interna validada, sem entrada direta do cliente.
+- **Execução manual 9948498: PASSOU.** Consultou Chatwoot e banco na ramificação de leitura/deduplicação, sem alcançar a persistência; terminou com `status=success`. Não comprova processamento positivo nem escrita no Supabase.
+- O workflow segue **inativo**, sem transferências automáticas conectadas. Não foram ativados gatilhos nem envio ao WhatsApp.
+- **Risco residual:** o número autorizado ainda está fixo no nó de whitelist e a configuração está codificada no workflow. Falta parametrização integral, isolamento e testes de escrita, falhas e concorrência.
