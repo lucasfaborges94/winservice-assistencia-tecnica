@@ -116,3 +116,9 @@ Todas as execuções acima retornaram `status=success` e foram verificadas pela 
 - Causa: prompt priorizava campo obrigatório ausente e não instruía responder à última pergunta do cliente antes de qualificar.
 - Atualizado e publicado prompt no workflow `xKLAexEfJxATiHDC`, versão `e82a564d-6b7e-47c5-a5f5-84f789c28e5c`, para priorizar perguntas, interpretar erros de digitação, lidar com objeções e evitar afirmações não verificadas sobre cobertura, preço ou disponibilidade.
 - A alteração não reprocessa a mensagem anterior; validar em nova mensagem real.
+
+## Conhecimento comercial para resposta sobre secadora Brastemp — 16/11/2026 UTC
+- Consultados `02_COMERCIAL/ATENDIMENTO/CATALOGO_EQUIPAMENTOS.json` e `CADASTRO_EQUIPAMENTOS_ATENDIDOS.md`: secadora de roupas consta `ativa`; exclusões vazias; purificadores `em_ativacao`.
+- Corrigido prompt do workflow `xKLAexEfJxATiHDC` e publicada versão `4aaa2d22-212f-4858-9716-642552713441` para confirmar que a Winservice trabalha com conserto de secadoras, inclusive Brastemp, sem prometer cobertura de modelo, região, peças, valor ou agenda.
+- Correção imediata com snapshot textual das categorias. **Débito técnico:** implementar consulta dinâmica à versão vigente do catálogo no Supabase por tenant, conforme documentação; não considerar a integração de catálogo pronta.
+- Pendente validar resposta em mensagem real após publicação.
