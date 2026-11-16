@@ -122,3 +122,8 @@ Todas as execuções acima retornaram `status=success` e foram verificadas pela 
 - Corrigido prompt do workflow `xKLAexEfJxATiHDC` e publicada versão `4aaa2d22-212f-4858-9716-642552713441` para confirmar que a Winservice trabalha com conserto de secadoras, inclusive Brastemp, sem prometer cobertura de modelo, região, peças, valor ou agenda.
 - Correção imediata com snapshot textual das categorias. **Débito técnico:** implementar consulta dinâmica à versão vigente do catálogo no Supabase por tenant, conforme documentação; não considerar a integração de catálogo pronta.
 - Pendente validar resposta em mensagem real após publicação.
+
+## Catálogo comercial no agente — 16/11/2026 UTC
+- Fonte: `02_COMERCIAL/ATENDIMENTO/CATALOGO_EQUIPAMENTOS.json`. Secadora de roupas é categoria ativa.
+- Publicada versão `4aaa2d22-212f-4858-9716-642552713441` do workflow `xKLAexEfJxATiHDC`, instruindo a IA a confirmar conserto de secadoras Brastemp, sem prometer agenda, peças, preço ou cobertura regional.
+- Catálogo foi incluído como fotografia no prompt. **Ainda não existe consulta dinâmica à revisão operacional do Supabase por empresa**. Validar resposta com nova mensagem real.
