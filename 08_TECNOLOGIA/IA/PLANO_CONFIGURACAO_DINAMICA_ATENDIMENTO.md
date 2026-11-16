@@ -1,6 +1,6 @@
 # Plano técnico — configuração dinâmica e isolamento do atendimento automatizado
 
-**Status:** PLANO TÉCNICO — não implantado no n8n
+**Status:** IMPLEMENTAÇÃO PARCIAL CONTROLADA — configuração inicial aplicada no n8n
 **Data:** 16/11/2026
 **Sistema:** n8n workflow `xKLAexEfJxATiHDC` (inativo; 25 nós)
 **Vínculo:** [DRP](DRP_ATENDIMENTO_AUTOMATIZADO.md), [ADR-001](../../01_GOVERNANCA/ADR_001_CONTINUIDADE_RECUPERACAO_E_REIMPLEMENTACAO.md)
@@ -61,3 +61,10 @@
 - SQL integral de migrations e políticas RLS.
 - Configuração dinâmica ainda não implementada.
 - Revisão do nó antigo de transferência 1149 antes de qualquer mudança de conectividade.
+
+## Implementação incremental — 16/11/2026
+- **Aplicado no n8n:** criado o nó `Carregar configuração restrita de homologação` antes da leitura de mensagens. Ele fornece `tenantKey`, `accountId`, `inboxId`, `teamId`, `conversationId`, `contactId`, `mode`, `outboundEnabled` e `assignmentEnabled`, com validação fail-closed para os valores já autorizados.
+- **Aplicado no n8n:** URL de leitura Chatwoot passou a consumir `accountId` e `conversationId` da configuração validada.
+- **Verificação posterior:** workflow **inativo**, 26 nós, gatilho manual ligado ao nó de configuração, nós de transferência real desabilitados e sem conexão de entrada. Não houve execução de teste nem envio externo nesta etapa.
+- **Ainda não implementado:** parametrização de SQL e demais nós; persistência externa da configuração; IDs de novas instalações; export JSON completo; testes de execução e reimplementação. Portanto o plano permanece **PARCIALMENTE IMPLANTADO**.
+- **Avisos do n8n:** dois nós desconectados preexistentes e recomendação de agrupar nós no canvas; não indicam ativação.
