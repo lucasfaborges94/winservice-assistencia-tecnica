@@ -1,17 +1,18 @@
 # ADR-001 — Continuidade, recuperação de desastre e reimplementação integral
 
-**Status:** PROPOSTA — aprovação expressa pendente
+**Status:** APROVADO E VIGENTE
 **Tipo:** Decisão de arquitetura e governança corporativa
-**Versão:** 0.1
+**Versão:** 1.0
 **Data:** 16/11/2026
 **Escopo:** Toda a Winservice, seus sistemas, processos críticos, integrações e automações
-**Responsável pela aprovação:** Direção
+**Aprovador:** Direção
+**Data de aprovação e vigência:** 16/11/2026
 **Referências:** `AGENTES.md`, `00_INSTITUCIONAL/REGRAS_DA_EMPRESA.md`, `01_GOVERNANCA/GUIA_USO_REPOSITORIO.md`
 
 ## Contexto
 O conhecimento necessário para operar ou reconstruir um sistema não pode depender de conversas, de uma única pessoa, de um servidor, de um fornecedor, nem da memória de uma IA. É necessário conseguir tanto **restaurar** serviços e dados quanto **reimplementar** a solução em infraestrutura inteiramente nova, inclusive quando os backups originais forem inutilizáveis. Os dois objetivos são distintos: reconstrução não garante recuperação de dados históricos sem backups.
 
-## Decisão proposta
+## Decisão aprovada
 1. Cada sistema, integração, automação ou processo digital classificado como crítico terá um **DRP (Disaster Recovery & Reimplementation Plan)** versionado e mantido junto à sua documentação de referência.
 2. Cada DRP contemplará dois caminhos separados:
    - **Recuperação:** restauração a partir de backups, snapshots e artefatos preservados, com verificação de integridade.
@@ -35,7 +36,7 @@ O conhecimento necessário para operar ou reconstruir um sistema não pode depen
 **Benefícios:** menor dependência de pessoas e fornecedores, reconstrução auditável, onboarding de operadores/IA, controle de mudanças.
 **Custos e riscos:** esforço contínuo de manutenção, backups externos, testes periódicos, necessidade de gestão de segredos e controle de acesso. Documentos desatualizados geram falsa confiança.
 
-## Implementação após aprovação
+## Plano de implementação
 1. Publicar modelo corporativo `MODELO_DRP.md` e modelo de instruções para IA.
 2. Inventariar sistemas e atribuir responsáveis, criticidade, RPO e RTO.
 3. Priorizar Chatwoot, n8n, Supabase e atendimento automatizado; incorporar o runbook existente sem considerá-lo DRP validado.
@@ -44,7 +45,8 @@ O conhecimento necessário para operar ou reconstruir um sistema não pode depen
 6. Adotar revisão do DRP como critério de conclusão de mudanças relevantes.
 
 ## Critérios para aprovação e revisão
-A Direção deve aprovar explicitamente este ADR antes de ele se tornar norma vigente. A aprovação não autoriza, por si só, alterar produção, restaurar dados reais, contratar serviços ou compartilhar credenciais. Revisar após o primeiro ensaio de desastre e sempre que houver mudança estrutural significativa.
+Esta ADR foi expressamente aprovada pela Direção em 16/11/2026. A aprovação não autoriza, por si só, alterar produção, restaurar dados reais, contratar serviços ou compartilhar credenciais. Revisar após o primeiro ensaio de desastre e sempre que houver mudança estrutural significativa.
 
 ## Registro de decisão
-- 16/11/2026: proposta elaborada a pedido da Direção; **aprovação formal pendente**.
+- 16/11/2026: proposta elaborada a pedido da Direção.
+- 16/11/2026: **aprovada expressamente pela Direção e colocada em vigência**; implantação técnica permanece sujeita a autorizações próprias.
