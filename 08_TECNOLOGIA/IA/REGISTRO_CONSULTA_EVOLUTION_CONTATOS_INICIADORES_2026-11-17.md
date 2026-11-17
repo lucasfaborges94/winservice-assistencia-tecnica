@@ -30,3 +30,9 @@ Apurar, desde o início do histórico disponível, quantos **contatos únicos en
 
 - Workflow n8n: https://workflows.winservicers.com/workflow/obnI8eXyB8dix7fi
 - Instância de atendimento: `51981459630`
+
+## Solicitação adicional — primeiras três mensagens
+
+**Solicitado em 17/11/2026; execução pendente.** Após apurar os contatos únicos que iniciaram conversa, recuperar, para **cada contato elegível**, as **três primeiras mensagens cronológicas da conversa** (independentemente do remetente), incluindo data/hora, direção (cliente ou Winservice) e texto quando disponível. Não confundir com as três últimas mensagens. Quando houver menos de três mensagens, registrar somente as existentes; identificar histórico incompleto ou não recuperável. Deduplicar números e identificadores LID antes de consolidar.
+
+**Armazenamento e privacidade:** Como mensagens de clientes podem conter dados pessoais, não publicar conteúdo integral em documento aberto ou em logs. Antes de persistir transcrições identificáveis no GitHub, confirmar a base legal, a necessidade e as restrições de acesso; preferir relatório privado com identificadores minimizados e conteúdo estritamente necessário. Registrar no repositório a metodologia, os totais e o local seguro do relatório; não inserir segredos ou credenciais.
