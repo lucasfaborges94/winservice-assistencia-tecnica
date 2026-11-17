@@ -10,3 +10,6 @@ Esta é a área de Tecnologia da Winservice. Os trabalhos de inteligência artif
 
 ## Continuidade operacional
 - A área de IA mantém um [runbook de recuperação do atendimento automatizado](IA/RECUPERACAO_ATENDIMENTO_AUTOMATIZADO.md), ainda incompleto quanto a exportações e backups restauráveis.
+
+## Inventário de tecnologias e integrações
+- [`INVENTARIO_INTEGRACOES_WINSERVICE.md`](INVENTARIO_INTEGRACOES_WINSERVICE.md): plataformas empresariais GitHub, Supabase, n8n, Hostinger, Canva e EasyPanel, com guias de conexão e validação. EasyPanel não possui conector confirmado nesta sessão; não confundir uso empresarial com conexão ativa no ChatGPT.
