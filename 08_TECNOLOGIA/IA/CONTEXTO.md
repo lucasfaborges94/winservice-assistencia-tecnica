@@ -16,6 +16,3 @@ Reúne registros de trabalhos realizados com apoio de IAs. Os logs estão em [`L
 
 ## Hermes Agent — secretário executivo digital
 - [Manual de instalação do Hermes Agent](MANUAL_INSTALACAO_HERMES_AGENT.md): roteiro operacional proposto em 17/11/2026 para VPS exclusiva e OpenAI API. **Não instalado**; contratação, implantação e homologação pendentes. Integrações empresariais e permissões de escrita ficam para fases posteriores.
-
-## Inventário de integrações do ChatGPT
-- [`INVENTARIO_PLUGINS_CONEXOES_CHATGPT.md`](INVENTARIO_PLUGINS_CONEXOES_CHATGPT.md): levantamento de 17/11/2026 das ferramentas e integrações expostas nesta sessão, distinguindo conexão GitHub comprovada de ferramentas disponíveis sem teste de autenticação. Não contém credenciais.
