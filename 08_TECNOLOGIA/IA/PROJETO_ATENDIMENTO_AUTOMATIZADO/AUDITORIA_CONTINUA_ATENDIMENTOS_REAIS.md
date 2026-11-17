@@ -40,7 +40,7 @@ Número de conversas auditadas; proporção de mensagens IA/humano; taxa de prim
 ## Backlog da amostra
 | Conversa | Transcrição completa | Autoria validada | Desfecho | Situação |
 |---|---|---|---|---|
-| 1163 | Pendente | Pendente | Não verificado | Auditoria em aberto |
+| 1163 | Bloqueada: sem leitura integral do Chatwoot | Pendente | Não verificado | Primeiro caso em análise; aguardando fonte integral |
 | 1167 | Pendente | Pendente | Não verificado | Auditoria em aberto |
 | 1179 | Pendente | 3 mensagens IA confirmadas; restante pendente | Não verificado | Auditoria em aberto |
 | 1178 | Pendente | Pendente | Não verificado | Auditoria em aberto |
@@ -57,3 +57,6 @@ O conector n8n disponível permite consultar execuções, mas **não fornece dir
 
 ## Histórico
 - 17/11/2026 — Direção solicitou auditoria contínua de amostra real, abrangendo IA e humanos, com registro versionado para melhoria de qualidade e conversão. Criado registro inicial e evidências já confirmadas.
+
+## Execução sequencial aprovada pela direção — 17/11/2026
+Auditar **uma conversa por vez**, começando pelo ID **1163**; registrar evidências e atualizar o contexto; comunicar conclusão; **aguardar OK expresso** antes do próximo ID. Após a amostra, ampliar o levantamento para todos os atendimentos do dia 17/11/2026 na inbox 17, sem duplicações. Acesso atual permite leitura de execuções n8n, mas não leitura integral de mensagens do Chatwoot; o Supabase conectado não apresenta tabela de histórico Chatwoot na listagem consultada. **Não classificar o caso 1163 como auditado até obter a transcrição integral.**
