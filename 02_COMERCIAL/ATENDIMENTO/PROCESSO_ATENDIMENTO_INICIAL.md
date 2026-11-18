@@ -88,3 +88,11 @@ A direção aceitou começar com quatro situações de conversa, ampliáveis con
 - **Aguardando equipe:** próxima ação depende de humano da Winservice, como validar exceção comercial ou confirmar disponibilidade; deve gerar tarefa/notificação interna pertinente.
 - **Encerrada:** situação de conversa sem ação imediata; o motivo e o estado comercial devem ser mantidos separadamente, para não confundir recusa com arquivamento por inatividade.
 Este conjunto é **inicial, não exaustivo**; detalhes das transições e condições ainda serão refinados. A direção concordou em manter 'aguardando equipe' desde já.
+
+## Coleta de dados para agendamento pela Isa (18/11/2026)
+
+A direção aprovou a etapa `AGENDAMENTO` no atendimento automático da inbox 17 do Chatwoot. Após qualificar a solicitação, a Isa coleta logradouro e número, aproveita bairro e cidade já informados e pede o complemento quando houver. Em condomínio, também verifica se há bloco ou torre e registra a identificação quando aplicável. A Isa pede o dia e o turno preferidos, manhã ou tarde, e aproveita respostas já fornecidas.
+
+Após concluir a coleta, o atendimento passa para `AGUARDANDO_EQUIPE` e segue para a equipe de agendamento no Chatwoot. A equipe confirma a disponibilidade e combina o atendimento com o cliente.
+
+Publicado no [workflow de produção da Isa](https://workflows.winservicers.com/workflow/xKLAexEfJxATiHDC) em 18/11/2026. A transição de estado e a criação do encaminhamento foram verificadas com dados fictícios no banco. A validação completa pelo WhatsApp permanece pendente.
