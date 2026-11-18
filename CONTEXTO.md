@@ -7,6 +7,10 @@
 ## Identidade e objetivo
 Winservice — Assistência Técnica, empresa de serviços em eletrodomésticos. O objetivo de longo prazo é desenvolver uma operação rentável, profissional, escalável e menos dependente do fundador, com ambição de ultrapassar 100 colaboradores.
 
+## Time de agentes de IA
+
+A Winservice vai criar um time de agentes de IA autônomos. A Isa é o ponto de partida para experimentar a composição por skills reutilizáveis, começando com tom de atendimento, fontes, qualificação e agendamento. A iniciativa orienta as decisões conforme as [diretrizes globais](AGENTES.md).
+
 ## Informações a confirmar
 Registros anteriores mencionam lavadoras, lava e seca e refrigeradores, bem como Porto Alegre e Canoas. Essas referências são contexto histórico e devem ser confirmadas antes de decisões comerciais ou operacionais. Equipe, capacidade, faturamento, margens, ferramentas e metas quantitativas ainda exigem diagnóstico.
 
