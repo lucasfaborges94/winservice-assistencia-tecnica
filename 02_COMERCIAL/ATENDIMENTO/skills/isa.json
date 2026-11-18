@@ -1,0 +1,23 @@
+{
+  "schema": 1,
+  "agente": "isa",
+  "modules": [
+    "winservice-tom-atendimento",
+    "winservice-fontes-atendimento",
+    "isa-qualificacao",
+    "isa-agendamento"
+  ],
+  "base": [
+    "winservice-tom-atendimento",
+    "winservice-fontes-atendimento"
+  ],
+  "states": {
+    "QUALIFICACAO": [
+      "isa-qualificacao",
+      "isa-agendamento"
+    ],
+    "AGENDAMENTO": [
+      "isa-agendamento"
+    ]
+  }
+}
