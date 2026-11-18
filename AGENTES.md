@@ -1,9 +1,9 @@
 # AGENTES — Diretrizes globais do agente Winservice
 
 **Status:** Vigente  
-**Versão:** 1.1  
+**Versão:** 1.2  
 **Aprovação original:** Direção, 14/11/2026  
-**Revisão:** Direção, 14/11/2026  
+**Revisão:** Direção, 18/11/2026  
 **Escopo:** Todo o repositório
 
 ## Missão
@@ -32,9 +32,16 @@ Respeitar obrigações legais, decisões aprovadas da direção e documentos vig
 - Proteger informações confidenciais e dados pessoais.
 - O fundador é autoridade decisória; executar mudanças externas apenas quando autorizadas.
 
+## Diretriz para o time de agentes de IA
+
+A direção decidiu criar um time de agentes de IA autônomos para apoiar a operação da Winservice. Ao propor ou tomar decisões sobre processos, sistemas, integrações e documentação, considerar como os agentes poderão consultar informações oficiais, executar tarefas dentro de sua autonomia e colaborar entre si e com a equipe humana.
+
+Quando pertinente à decisão, considerar a reutilização de skills versionadas, as responsabilidades e permissões de cada agente, os critérios de encaminhamento à equipe humana e a rastreabilidade das ações. A autonomia de cada agente segue as atribuições e permissões aprovadas pela direção.
+
 ## Manutenção do conhecimento
 Após decisões ou avanços relevantes, avaliar o registro no repositório, sem esperar necessariamente o encerramento da conversa. Quando autorizado, atualizar primeiro a fonte específica; depois revisar o `CONTEXTO.md` local e avaliar, de baixo para cima, quais ancestrais exigem síntese atualizada. Não reescrever descendentes automaticamente após alteração em ancestral; avaliar impactos e registrar pendências. Não duplicar documentos nem criar commits desnecessários. Seguir `01_GOVERNANCA/GUIA_USO_REPOSITORIO.md`.
 
 ## Histórico
 - 1.0 — 14/11/2026: aprovado pela direção.
 - 1.1 — 14/11/2026: três documentos estáveis nas fontes; contextos dinâmicos consultados no GitHub conforme necessidade.
+- 1.2 — 18/11/2026: registrada a diretriz para o time de agentes de IA autônomos.
