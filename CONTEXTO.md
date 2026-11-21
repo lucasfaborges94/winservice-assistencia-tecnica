@@ -1,7 +1,7 @@
 # CONTEXTO — Visão institucional da Winservice
 
 **Status:** Vigente como registro de contexto, sujeito a atualização factual  
-**Versão:** 1.1  
+**Versão:** 1.2  
 **Validação da estrutura:** Direção, 14/11/2026
 
 ## Identidade e objetivo
@@ -10,6 +10,8 @@ Winservice — Assistência Técnica, empresa de serviços em eletrodomésticos.
 ## Time de agentes de IA
 
 A Winservice vai criar um time de agentes de IA autônomos. A Isa é o ponto de partida para experimentar a composição por skills reutilizáveis, começando com tom de atendimento, fontes, qualificação e agendamento. A iniciativa orienta as decisões conforme as [diretrizes globais](AGENTES.md).
+
+O fluxo decidido para as skills da Isa é manter o GitHub como fonte versionada: após uma mudança ser alinhada nesta conversa, o assistente atualiza os arquivos e publica na `main`. A publicação sincroniza a versão no Supabase e atualiza o catálogo ativo do n8n; a conclusão deve ser confirmada nos três pontos. O procedimento está detalhado no [contexto do atendimento](02_COMERCIAL/ATENDIMENTO/CONTEXTO.md).
 
 ## Informações a confirmar
 Registros anteriores mencionam lavadoras, lava e seca e refrigeradores, bem como Porto Alegre e Canoas. Essas referências são contexto histórico e devem ser confirmadas antes de decisões comerciais ou operacionais. Equipe, capacidade, faturamento, margens, ferramentas e metas quantitativas ainda exigem diagnóstico.
@@ -31,6 +33,7 @@ Este arquivo é um resumo transversal. Alterações locais só devem chegar aqui
 ## Histórico
 - 1.0 — 14/11/2026: estrutura de contexto aprovada, com lacunas factuais explicitadas.
 - 1.1 — 14/11/2026: esclarecido caráter dinâmico e consulta sob demanda.
+- 1.2 — 21/11/2026: registrado o fluxo de publicação e sincronização das skills da Isa.
 
 ## Continuidade e recuperação corporativa
 - Aprovada e vigente a [`ADR-001 — Continuidade, recuperação de desastre e reimplementação integral`](01_GOVERNANCA/ADR_001_CONTINUIDADE_RECUPERACAO_E_REIMPLEMENTACAO.md), acompanhada de modelos de DRP e de instruções para agentes de IA. **Aprovação expressa da Direção em 16/11/2026**; DRPs específicos dependem de implementação e validação.
