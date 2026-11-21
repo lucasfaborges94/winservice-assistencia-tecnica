@@ -18,7 +18,7 @@ O [manifesto](skills/isa.json) define a composição da Isa por etapa e referenc
 
 ### Fluxo de mudança e publicação
 
-Decidimos que as mudanças nas skills da Isa serão conduzidas nesta conversa: depois de alinharmos e aprovarmos uma alteração, o assistente atualiza os arquivos necessários no GitHub e publica a mudança na branch oficial `main). O usuário não precisa fazer manualmente cada edição ou commit. Um commit em uma branch de trabalho, por si só, não inicia a sincronização; a publicação só ocorre quando a alteração chega à `main` (por merge ou publicação direta autorizada).
+Decidimos que as mudanças nas skills da Isa serão conduzidas nesta conversa: depois de alinharmos e aprovarmos uma alteração, o assistente atualiza os arquivos necessários no GitHub e publica a mudança na branch oficial `main`. O usuário não precisa fazer manualmente cada edição ou commit. Um commit em uma branch de trabalho, por si só, não inicia a sincronização; a publicação só ocorre quando a alteração chega à `main` (por merge ou publicação direta autorizada).
 
 A publicação lê o manifesto e as skills da mesma revisão, valida o conjunto e registra a versão no Supabase. O Supabase notifica o n8n, que atualiza sua cópia ativa do catálogo na Data Table. A Isa utiliza a versão ativa na próxima execução. Se o aviso falhar, a reconciliação horária confere o estado e recupera a publicação; até a confirmação da atualização, a versão anterior permanece ativa.
 
